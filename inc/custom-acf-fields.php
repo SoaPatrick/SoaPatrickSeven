@@ -2,7 +2,7 @@
 /**
  * Custom ACF Fields
  *
- * @link https://generatewp.com/post-type/
+ * @link https://www.advancedcustomfields.com/resources/
  *
  * @package soapatrickseven
  */
