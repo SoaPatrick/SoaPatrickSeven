@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package themebox
+ * @package soapatrickseven
  */
 
 ?>
@@ -22,21 +22,21 @@
 			?>
 			<div class="entry-meta">
 				<?php
-				themebox_posted_on();
-				themebox_posted_by();
+				soapatrickseven_posted_on();
+				soapatrickseven_posted_by();
 				?>
 			</div>
 		<?php endif; ?>
 	</header>
 
-	<?php themebox_post_thumbnail(); ?>
+	<?php soapatrickseven_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
 		the_content( sprintf(
 			wp_kses(
 				/* translators: %s: Name of current post. Only visible to screen readers */
-				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'themebox' ),
+				__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'soapatrickseven' ),
 				array(
 					'span' => array(
 						'class' => array(),
@@ -47,13 +47,13 @@
 		) );
 
 		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'themebox' ),
+			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'soapatrickseven' ),
 			'after'  => '</div>',
 		) );
 		?>
 	</div>
 
 	<footer class="entry-footer">
-		<?php themebox_entry_footer(); ?>
+		<?php soapatrickseven_entry_footer(); ?>
 	</footer>
 </article>

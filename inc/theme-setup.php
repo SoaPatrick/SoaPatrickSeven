@@ -2,14 +2,14 @@
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
- * @package themebox
+ * @package soapatrickseven
  */
 
-if ( ! function_exists( 'themebox_setup' ) ) :
-	function themebox_setup() {
+if ( ! function_exists( 'soapatrickseven_setup' ) ) :
+	function soapatrickseven_setup() {
 
 		// Make theme available for translation.
-		load_theme_textdomain( 'themebox', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'soapatrickseven', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -25,7 +25,7 @@ if ( ! function_exists( 'themebox_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Primary', 'themebox' ),
+			'primary' => esc_html__( 'Primary', 'soapatrickseven' ),
 		) );
 
 		// Switch default core markup for search form, comment form, and comments
@@ -38,4 +38,4 @@ if ( ! function_exists( 'themebox_setup' ) ) :
 		) );
 	}
 endif;
-add_action( 'after_setup_theme', 'themebox_setup' );
+add_action( 'after_setup_theme', 'soapatrickseven_setup' );
