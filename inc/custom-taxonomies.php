@@ -6,3 +6,5 @@
  *
  * @package soapatrickseven
  */
+
+require get_template_directory() . '/tax/tax-factory-tags.php';
