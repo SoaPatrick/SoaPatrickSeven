@@ -4,7 +4,7 @@
  *
  * @link https://generatewp.com/post-type/
  *
- * @package themebox
+ * @package soapatrickseven
  */
 
 require get_template_directory() . '/cpt/cpt-factory.php';

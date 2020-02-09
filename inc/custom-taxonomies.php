@@ -4,7 +4,7 @@
  *
  * @link https://generatewp.com/taxonomy/
  *
- * @package themebox
+ * @package soapatrickseven
  */
 
 require get_template_directory() . '/tax/tax-factory-tags.php';
