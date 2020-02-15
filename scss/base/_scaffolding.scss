@@ -38,7 +38,7 @@ body {
 	}
 
   @media (min-width: 768px) {
-    box-shadow: $navbar__shadow;
+    box-shadow: $shadow__quarter;
 		margin-bottom: $margin__body;
     min-height: calc(100vh - 2 * #{$margin__body});
 	}
