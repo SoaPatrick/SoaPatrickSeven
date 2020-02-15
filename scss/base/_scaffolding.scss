@@ -21,7 +21,7 @@ body {
   -webkit-font-smoothing: antialiased;
 
 	@media (min-width: 768px) {
-    margin: $margin__body;
+    margin: $margin__body calc(#{$width__navbar} + 5px);
   }
 }
 

@@ -1,0 +1,86 @@
+/*--------------------------------------------------------------
+#Navigation
+--------------------------------------------------------------*/
+
+// SoaPatrick Styling
+.soapatrick {
+	font-style: normal;
+  display: inline-block;
+
+  &--soa {
+    margin-top: -.2em;
+  }
+
+  &--patrick {
+    margin-top: .13em;
+  }
+}
+
+.site-navigation {
+	position: fixed;
+	width: $width__navbar;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	padding-top: $margin__body;
+  z-index: 1000;
+
+	&__link {
+		height: $width__navbar;
+		width: $width__navbar;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		cursor: pointer;
+
+		span {
+			display: flex;
+			white-space: nowrap;
+			align-items: center;
+			height: auto;
+			position: absolute;
+			z-index: 0;
+			left: calc(1rem + #{$width__navbar});
+			visibility: hidden;
+			background-color: var(--color__text);
+			color: var(--color__bg);
+			padding: .5rem 1.25rem;
+			font-weight: 400;
+			border-radius: 2rem;
+    }
+
+		&:hover {
+      background: var(--color__highlight);
+      color: $color__white;
+
+      svg {
+        color: $color__white;
+      }
+
+			span {
+				visibility: visible;
+			}
+		}
+	}
+
+	&__icon .secondary {
+    fill: var(--color__text);
+  }
+
+  &__logo,
+  &__icon {
+    color: var(--color__highlight);
+		font-size: calc(#{$width__navbar} / 3);
+    width: calc(#{$width__navbar} / 3);
+  }
+}
+
+
+// fix WP Admin Navbar margin
+@media (min-width: 768px) {
+	body.admin-bar {
+		.site-navigation {
+			padding-top: calc(2em + 32px);
+		}
+	}
+}

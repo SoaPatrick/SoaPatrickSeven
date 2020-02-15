@@ -33,9 +33,7 @@
       <!--  TODO: Jira Task SP7-12 -->
   </div>
 
-  <nav class="site-navigation">
-      <!--  TODO: Jira Task SP7-8 -->
-	</nav>
+  <?php include get_template_directory() . '/layout-parts/navigation.php'; ?>
 
 	<div class="site-wrapper">
 	  <div class="site-content">
