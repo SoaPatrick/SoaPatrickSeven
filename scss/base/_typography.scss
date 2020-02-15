@@ -1,3 +1,128 @@
 /*--------------------------------------------------------------
 #Typography
 --------------------------------------------------------------*/
+
+/*
+ * General
+ * -----------------------------------------------------------
+ */
+
+p {
+  margin: $margin__base;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: $font-family__heading;
+	font-weight: $font-weight__regular;
+	line-height: $line-height__heading;
+}
+
+/*
+ * Links
+ * -----------------------------------------------------------
+ */
+
+a {
+  color: var(--color__highlight);
+  font-weight: $font-weight__regular;
+  text-decoration: none;
+
+	&:hover {
+		color: var(--color__highlight);
+		text-decoration: underline;
+  }
+
+  &:focus {
+    outline: 3px dotted var(--color__highlight);
+    background: var(--color__text);
+  }
+}
+
+/*
+ * Pre and Code
+ * -----------------------------------------------------------
+ */
+
+code,
+pre {
+  background: var(--color__bg);
+  border-radius: .2em;
+  line-height: 1;
+  font-size: .9rem;
+}
+
+code {
+  padding: .3em;
+  display: inline-block;
+  line-height: 1;
+}
+
+pre  {
+	overflow-x: auto;
+	padding: 0;
+  border: 0;
+
+	code {
+    background: transparent;
+    padding: 1rem;
+    display: block;
+    line-height: initial;
+	}
+}
+
+/*
+ * Misc Elements
+ * -----------------------------------------------------------
+ */
+
+hr {
+  margin: $margin__base;
+	border: 1px solid var(--color__highlight);;
+	width: 100%;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*
+ * Blockquotes
+ * TODO: Move to Gutenberg SASS Files later on
+ * -----------------------------------------------------------
+ */
+blockquote.wp-block-quote  {
+  margin: $margin__base;
+	padding: 0 1rem;
+	border-left: 5px solid var(--color__highlight);
+
+	p {
+		font-weight: 400;
+	}
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+
+	&.is-style-large {
+		margin: $margin__base;
+		padding: 0 2rem;
+
+		p {
+			font-size: 1.2rem;
+			line-height: 1.4;
+		}
+	}
+
+	cite {
+		font-style: normal;
+		font-size: 0.8rem;
+	}
+}
