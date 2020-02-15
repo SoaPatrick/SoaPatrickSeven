@@ -8,3 +8,11 @@
 		background-color: var(--#{$color});
 	}
 }
+
+// mixin for random bubbles
+@mixin bubbles($left, $scale, $opacity, $moveclouds, $sideways, $delay) {
+  left: $left;
+  transform: scale($scale);
+  opacity: $opacity;
+  animation: moveclouds $moveclouds linear $delay infinite,sideWays $sideways ease-in-out infinite alternate;
+}

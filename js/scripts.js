@@ -4,7 +4,7 @@ window.onload = function(){
 	document.getElementById('toggle-search-collapse').onclick = function() {
     document.getElementById('search-collapse').classList.toggle('open');
     document.getElementById('toggle-search-collapse').classList.toggle('active');
-    //document.getElementById('bubble-wrapper').classList.toggle('hidden');
+    document.getElementById('bubbles-animated').classList.toggle('hidden');
     document.getElementById("search-collapse--input").focus();
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera

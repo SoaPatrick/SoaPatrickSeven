@@ -53,6 +53,12 @@
   <?php include get_template_directory() . '/layout-parts/navigation.php'; ?>
 
 	<div class="site-wrapper">
+    <?php
+    if ( is_home() && !is_paged() ) :
+      include get_template_directory() . '/layout-parts/header--home.php';
+    endif;
+    ?>
+
 	  <div class="site-content">
 		  <main class="site-main">
 
