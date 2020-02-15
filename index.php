@@ -13,9 +13,7 @@
  */
 
 get_header();
-?>
 
-  <?php
   if ( have_posts() ) :
 
     if ( is_home() && ! is_front_page() ) :
@@ -38,7 +36,5 @@ get_header();
     get_template_part( 'template-parts/content', 'none' );
 
   endif;
-  ?>
 
-<?php
 get_footer();
