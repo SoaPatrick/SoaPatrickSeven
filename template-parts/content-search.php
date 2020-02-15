@@ -27,7 +27,7 @@
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
-	</div><
+	</div>
 
 	<footer class="entry-footer">
 		<?php soapatrickseven_entry_footer(); ?>
