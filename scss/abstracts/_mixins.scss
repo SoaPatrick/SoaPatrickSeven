@@ -1,3 +1,10 @@
 /*--------------------------------------------------------------
 #Mixins
 --------------------------------------------------------------*/
+
+// mixin for  switching colors in settings
+@mixin color-switch($color) {
+	#switch--#{$color} {
+		background-color: var(--#{$color});
+	}
+}

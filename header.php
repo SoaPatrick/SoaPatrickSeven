@@ -24,10 +24,7 @@
 
 <body <?php body_class(); ?>>
 
-  <div id="settings-window">
-      <!--  TODO: Jira Task SP7-7 -->
-  </div>
-
+  <?php include get_template_directory() . '/layout-parts/settings.php'; ?>
 
   <div id="search-collapse">
       <!--  TODO: Jira Task SP7-12 -->

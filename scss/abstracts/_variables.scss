@@ -49,6 +49,10 @@ $font-weight__bold: 600;
 $margin__base: 1rem;
 $margin__body: 2rem;
 
+
+$shadow__quarter: 0 0 .5rem rgba(0,0,0,.25);
+$shadow__half: 0 0 .5rem rgba(0,0,0,.5);
+
 // Outline
 $outline__width: 3px;
 $outline: $outline__width dotted var(--color__highlight);
@@ -56,10 +60,16 @@ $outline: $outline__width dotted var(--color__highlight);
 // Navbar
 $navbar__width: 3rem;
 $navbar__height: 1.2 * $navbar__width;
-$navbar__shadow: 0 0 .5em rgba(0,0,0,.25);
 
 // CSS Variables
 :root {
+	--amber: #FFB300;
+	--red: #CF3A3A;
+	--pink: #EC407A;
+	--purple: #AB47BC;
+	--blue: #28aae2;
+	--green: #348236;
+
   --color__bg: #{$color__gray--darker};
   --color__wrapper: #{$color__gray--dark};
   --color__text: #{$color__white};
