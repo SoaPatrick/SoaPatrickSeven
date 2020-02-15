@@ -17,7 +17,9 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php wp_head(); ?>
+  <?php wp_head(); ?>
+  <script>FontAwesomeConfig = { searchPseudoElements: true };</script>
+  <script src="https://kit.fontawesome.com/89d3ae0c6b.js" crossorigin="anonymous"></script>
 </head>
 
 <body <?php body_class(); ?>>
