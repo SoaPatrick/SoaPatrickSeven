@@ -49,6 +49,15 @@ $font-weight__bold: 600;
 $margin__base: 1rem;
 $margin__body: 2rem;
 
+// Outline
+$outline__width: 3px;
+$outline: $outline__width dotted var(--color__highlight);
+
+// Navbar
+$navbar__width: 3rem;
+$navbar__height: 1.2 * $navbar__width;
+$navbar__shadow: 0 0 .5em rgba(0,0,0,.25);
+
 // CSS Variables
 :root {
   --color__bg: #{$color__gray--darker};
