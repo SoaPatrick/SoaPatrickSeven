@@ -15,12 +15,6 @@ $color__gray--dark: #222222;
 $color__gray--darker: #1c1c1c;
 $color__gray--light: #eeeeee;
 
-$color__amber: #FFB300;
-$color__red: #CF3A3A;
-$color__pink: #EC407A;
-$color__purple: #AB47BC;
-$color__blue: #28aae2;
-$color__green: #348236;
 
 // Font-Family
 $font-family__base: 'Source Sans Pro', serif;
@@ -70,8 +64,24 @@ $navbar__height: 1.2 * $navbar__width;
 	--blue: #28aae2;
 	--green: #348236;
 
+  --color__highlight: var(--pink);
+}
+
+[data-theme="dark"] {
   --color__bg: #{$color__gray--darker};
   --color__wrapper: #{$color__gray--dark};
   --color__text: #{$color__white};
-  --color__highlight: #{$color__pink};
 }
+
+[data-theme="light"] {
+	--color__bg: #{$color__gray--light};
+	--color__wrapper: #{$color__white};
+	--color__text: #{$color__gray--dark};
+}
+
+[data-color="amber"] { --color__highlight: var(--amber); }
+[data-color="red"] { --color__highlight: var(--red); }
+[data-color="pink"] { --color__highlight: var(--pink); }
+[data-color="purple"] { --color__highlight: var(--purple); }
+[data-color="blue"] { --color__highlight: var(--blue); }
+[data-color="green"] { --color__highlight: var(--green); }

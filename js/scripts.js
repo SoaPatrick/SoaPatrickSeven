@@ -13,6 +13,52 @@ window.onload = function(){
 };
 
 
+
+// script to toggle between light and dark
+// mode and store setting in local storage
+// ----------------------------------------
+const toggleThemeSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
+toggleThemeSwitch.addEventListener('change', switchTheme, false);
+
+function switchTheme(e) {
+    if (e.target.checked) {
+        document.documentElement.setAttribute('data-theme', 'light');
+        localStorage.setItem('theme', 'light');
+    }
+    else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+// currentTheme variable set in head
+if (currentTheme) {
+    document.documentElement.setAttribute('data-theme', currentTheme);
+
+    if (currentTheme === 'light') {
+        toggleThemeSwitch.checked = true;
+    }
+}
+
+
+// script to toggle between color themes
+// and store setting in local storage
+// ----------------------------------------
+const toggleColorSwitch = document.getElementById("color-switch");
+toggleColorSwitch.addEventListener('click', switchColor, false);
+
+function switchColor(e) {
+	document.documentElement.setAttribute('data-color', e.target.value);
+	localStorage.setItem('color', e.target.value);
+}
+
+// currentColor variable set in head
+if (currentColor) {
+    document.documentElement.setAttribute('data-color', currentColor);
+    document.getElementById('switch--'+currentColor).checked = true;
+}
+
+
 // make Settings draggagle
 // ----------------------------------------
 dragElement(document.getElementById("settings"));
