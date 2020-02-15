@@ -8,17 +8,17 @@
   display: inline-block;
 
   &--soa {
-    margin-top: -.2em;
+    margin-top: -.2rem;
   }
 
   &--patrick {
-    margin-top: .13em;
+    margin-top: .13rem;
   }
 }
 
 .site-navigation {
 	position: fixed;
-	width: $width__navbar;
+	width: $navbar__width;
 	top: 0;
 	left: 0;
 	bottom: 0;
@@ -26,8 +26,8 @@
   z-index: 1000;
 
 	&__link {
-		height: $width__navbar;
-		width: $width__navbar;
+		height: $navbar__width;
+		width: $navbar__width;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -40,7 +40,7 @@
 			height: auto;
 			position: absolute;
 			z-index: 0;
-			left: calc(1rem + #{$width__navbar});
+			left: calc(1rem + #{$navbar__width});
 			visibility: hidden;
 			background-color: var(--color__text);
 			color: var(--color__bg);
@@ -53,26 +53,56 @@
       background: var(--color__highlight);
       color: $color__white;
 
-      svg {
-        color: $color__white;
-      }
-
 			span {
 				visibility: visible;
 			}
-		}
+
+      svg {
+        color: $color__white;
+
+        .primary {
+          fill: $color__black;
+        }
+      }
+    }
+
+    &:focus {
+      outline: $outline;
+      outline-offset: $outline__width * -1; // make outline inside link
+    }
 	}
 
-	&__icon .secondary {
-    fill: var(--color__text);
-  }
-
-  &__logo,
   &__icon {
     color: var(--color__highlight);
-		font-size: calc(#{$width__navbar} / 3);
-    width: calc(#{$width__navbar} / 3);
+		font-size: calc(#{$navbar__width} / 3);
+    width: calc(#{$navbar__width} / 3);
+
+    .secondary {
+      fill: var(--color__text);
+    }
   }
+}
+
+@media (max-width: 767px) {
+	.site-navigation {
+		top: auto;
+		width: 100%;
+		display: flex;
+		padding: 0;
+		box-shadow: $navbar__shadow;
+		background: var(--color__bg);
+
+		&__link {
+			flex-grow: 1;
+      height: $navbar__height;
+			align-items: center;
+			padding-bottom: 1rem;
+
+			span {
+				display: none;
+			}
+		}
+	}
 }
 
 
@@ -80,7 +110,7 @@
 @media (min-width: 768px) {
 	body.admin-bar {
 		.site-navigation {
-			padding-top: calc(2em + 32px);
+			padding-top: calc(#{$margin__body} + 32px);
 		}
 	}
 }
