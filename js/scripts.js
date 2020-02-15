@@ -1,14 +1,28 @@
 window.onload = function(){
 
+	// open/close search
+	document.getElementById('toggle-search-collapse').onclick = function() {
+    document.getElementById('search-collapse').classList.toggle('open');
+    document.getElementById('toggle-search-collapse').classList.toggle('active');
+    //document.getElementById('bubble-wrapper').classList.toggle('hidden');
+    document.getElementById("search-collapse--input").focus();
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+    document.getElementById('search-collapse--input').value = "";
+  };
+
+
 	// toggle Settings from Navigation
 	document.getElementById('toggle-settings').onclick = function() {
     document.getElementById('settings').classList.toggle('open');
+    document.getElementById('toggle-settings').classList.toggle('active');
     document.getElementById("light-dark-switch").focus();
 	};
 
 	// Close Settings
 	document.getElementById('settings__close').onclick = function() {
-		document.getElementById('settings').classList.remove('open');
+    document.getElementById('settings').classList.remove('open');
+    document.getElementById('toggle-settings').classList.remove('active');
 	};
 };
 

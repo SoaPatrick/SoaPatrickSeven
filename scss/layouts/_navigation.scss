@@ -49,13 +49,10 @@
 			border-radius: 2rem;
     }
 
+    &.active,
 		&:hover {
       background: var(--color__highlight);
       color: $color__white;
-
-			span {
-				visibility: visible;
-			}
 
       svg {
         color: $color__white;
@@ -63,6 +60,10 @@
         .primary {
           fill: var(--color__bg);
         }
+      }
+
+      &:hover span {
+        visibility: visible;
       }
     }
 

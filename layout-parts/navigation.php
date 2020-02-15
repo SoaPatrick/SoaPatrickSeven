@@ -29,7 +29,7 @@
       <path fill="currentColor" class="primary" d="M136 480H24a24 24 0 0 1-24-24V56a24 24 0 0 1 24-24h112a24 24 0 0 1 24 24v400a24 24 0 0 1-24 24z"></path>
     </svg>
   </a>
-  <button class="site-navigation__link" aria-label="<?php esc_html_e( 'Settings', 'soapatrickseven' ); ?><" id="toggle-settings">
+  <button class="site-navigation__link" aria-label="<?php esc_html_e( 'Settings', 'soapatrickseven' ); ?>" id="toggle-settings">
     <span><?php esc_html_e( 'Settings', 'soapatrickseven' ); ?></span>
     <svg aria-hidden="true" focusable="false" class="site-navigation__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
       <path fill="currentColor" class="secondary" d="M80 0H48a16 16 0 0 0-16 16v80h64V16A16 16 0 0 0 80 0zm112 496a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16v-48h-64zm-160 0a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16V192H32zM240 0h-32a16 16 0 0 0-16 16v336h64V16a16 16 0 0 0-16-16zm112 496a16 16 0 0 0 16 16h32a16 16 0 0 0 16-16V320h-64zM400 0h-32a16 16 0 0 0-16 16v208h64V16a16 16 0 0 0-16-16z"></path>

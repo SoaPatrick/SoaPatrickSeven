@@ -49,11 +49,7 @@
 <body <?php body_class(); ?>>
 
   <?php include get_template_directory() . '/layout-parts/settings.php'; ?>
-
-  <div id="search-collapse">
-      <!--  TODO: Jira Task SP7-12 -->
-  </div>
-
+  <?php include get_template_directory() . '/layout-parts/search.php'; ?>
   <?php include get_template_directory() . '/layout-parts/navigation.php'; ?>
 
 	<div class="site-wrapper">
