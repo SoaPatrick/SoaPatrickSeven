@@ -22,7 +22,6 @@
 
 <body <?php body_class(); ?>>
 
-
   <div id="settings-window">
       <!--  TODO: Jira Task SP7-7 -->
   </div>
@@ -37,6 +36,6 @@
 	</nav>
 
 	<div class="site-wrapper">
-	  <div id="primary" class="content-area">
-		  <main id="main" class="site-main">
+	  <div class="site-content">
+		  <main class="site-main">
 
