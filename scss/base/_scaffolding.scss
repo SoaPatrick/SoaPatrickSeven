@@ -18,4 +18,32 @@ body {
   font-weight: $font-weight__light;
   background: var(--color__bg);
   color: var(--color__text);
+  -webkit-font-smoothing: antialiased;
+
+	@media (min-width: 768px) {
+    margin: $margin__body;
+  }
+}
+
+.site-wrapper {
+	display: flex;
+	flex-direction: column;
+	background-color: var(--color__wrapper);
+	position: relative;
+	z-index: 1;
+	min-height: calc(100vh - 2 * #{$margin__body});
+
+	@media (min-width: 768px) {
+		box-shadow: 0 0 .5rem rgba(0,0,0,.25);
+		margin-bottom: $margin__body;
+	}
+
+	.site-footer,
+	.site-header {
+		flex: none;
+	}
+
+	.site-content {
+		flex: 1 0 auto;
+	}
 }

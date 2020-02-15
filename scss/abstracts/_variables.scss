@@ -46,10 +46,13 @@ $font-weight__regular: 400;
 $font-weight__bold: 600;
 
 // Margings
-$margin__base: 1rem 0;
+$margin__base: 1rem;
+$margin__body: 2rem;
 
+// CSS Variables
 :root {
   --color__bg: #{$color__gray--darker};
+  --color__wrapper: #{$color__gray--dark};
   --color__text: #{$color__white};
   --color__highlight: #{$color__pink};
 }
