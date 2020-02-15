@@ -56,9 +56,10 @@
     <?php
     if ( is_home() && !is_paged() ) :
       include get_template_directory() . '/layout-parts/header--home.php';
+    else :
+      include get_template_directory() . '/layout-parts/header--not-home.php';
     endif;
     ?>
-
 	  <div class="site-content">
 		  <main class="site-main">
 

@@ -1,3 +1,11 @@
+<?php
+/**
+ * Layout part for displaying the header on home
+ *
+ * @package soapatrickseven
+ */
+
+?>
 
 <header class="site-header">
   <div id="bubbles-animated" class="bubbles-animated">
