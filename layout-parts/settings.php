@@ -16,7 +16,7 @@
     <h2>Settings</h2>
     <div class="theme-switch-wrapper">
       <i class="fal fa-lightbulb-slash"></i>
-      <label class="theme-switch" for="checkbox">
+      <label class="theme-switch" for="light-dark-switch">
         <input type="checkbox" id="light-dark-switch">
         <div class="slider round"></div>
       </label>
