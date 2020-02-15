@@ -11,13 +11,16 @@
 
 ?>
 
-	</div><!-- #site-wrapper -->
+      </main>
+	  </div>
 
-	<footer class="site-footer">
-		<div class="site-info">
-			&copy; <?php echo date('Y'); ?> by SoaPatrick
-		</div>
-	</footer>
+    <footer class="site-footer">
+      <div class="site-info">
+        &copy; <?php echo date('Y'); ?> by SoaPatrick
+      </div>
+    </footer>
+
+	</div>
 
 <?php wp_footer(); ?>
 
