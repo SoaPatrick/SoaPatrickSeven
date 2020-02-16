@@ -7,5 +7,5 @@
  * @package soapatrickseven
  */
 
-require get_template_directory() . '/cpt/cpt-factory.php';
-require get_template_directory() . '/cpt/cpt-log.php';
+get_template_part( 'cpt/cpt', 'factory');
+get_template_part( 'cpt/cpt', 'log');
