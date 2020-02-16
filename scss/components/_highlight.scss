@@ -1,0 +1,13 @@
+/*--------------------------------------------------------------
+#highlight
+--------------------------------------------------------------*/
+
+.highlight {
+	color: $color__white;
+	background: var(--color__highlight);
+
+	a {
+		font-weight: $font-weight__bold;
+		color: inherit;
+	}
+}
