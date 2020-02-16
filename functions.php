@@ -46,7 +46,8 @@ function soapatrickseven_previous_post_link_class($format) {
 }
 
 /**
- * add classes to next and previous Post
+ * Replace Youtube Videos with Preview Image instead
+ * of embeded iFrame, play video on click
  *
  */
 function oapatrickseven_youtube_embeded($content){
