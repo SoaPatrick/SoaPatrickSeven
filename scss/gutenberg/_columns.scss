@@ -1,0 +1,20 @@
+/*--------------------------------------------------------------
+#Columns
+--------------------------------------------------------------*/
+
+@media (min-width: 600px) {
+  .wp-block-column {
+      flex-basis:calc(50% - #{$margin__base});
+      flex-grow: 0
+  }
+
+  .wp-block-column:nth-child(2n) {
+      margin-left: $margin__base * 2;
+  }
+}
+
+@media (min-width: 782px) {
+  .wp-block-column:not(:first-child) {
+      margin-left: $margin__base * 2;
+  }
+}

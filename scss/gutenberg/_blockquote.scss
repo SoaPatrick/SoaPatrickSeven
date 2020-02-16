@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+#Blockquote
+--------------------------------------------------------------*/
+
+ blockquote.wp-block-quote  {
+  margin: $margin__base 0;
+	padding: 0 $margin__base;
+	border-left: 5px solid var(--color__highlight);
+
+	p {
+		font-weight: 400;
+	}
+
+	> *:first-child {
+		margin-top: 0;
+	}
+
+	> *:last-child {
+		margin-bottom: 0;
+	}
+
+	&.is-style-large {
+		margin: $margin__base 0;
+		padding: 0 calc(#{$margin__base} * 2);
+
+		p {
+			font-size: 1.2rem;
+			line-height: 1.4;
+		}
+	}
+
+	cite {
+		font-style: normal;
+		font-size: 0.8rem;
+	}
+}

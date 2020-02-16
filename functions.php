@@ -18,8 +18,9 @@ require get_template_directory() . '/inc/custom-acf-fields.php';
 
 
 /**
-* add classes to next and previous Posts
-*/
+ * add classes to next and previous Posts
+ *
+ */
 add_filter('next_posts_link_attributes', 'soapatrickseven_next_posts_link_class');
 add_filter('previous_posts_link_attributes', 'soapatrickseven_previous_posts_link_class');
 function soapatrickseven_next_posts_link_class() {
@@ -31,6 +32,7 @@ function soapatrickseven_previous_posts_link_class() {
 
 /**
  * add classes to next and previous Post
+ *
  */
 add_filter('next_post_link', 'soapatrickseven_next_post_link_class');
 add_filter('previous_post_link', 'soapatrickseven_previous_post_link_class');
@@ -44,15 +46,28 @@ function soapatrickseven_previous_post_link_class($format) {
 }
 
 /**
-* Remove the many post classes which are not needed
-*/
-function soapatrickseven_remove_postclasses($classes, $class, $post_id) {
-  $classes = array_diff( $classes, array(
-      'hentry',
-      'post-' . $post_id,
-      'type-' . get_post_type($post_id),
-      'status-' . get_post_status($post_id),
-  ) );
-  return $classes;
+ * add classes to next and previous Post
+ *
+ */
+function oapatrickseven_youtube_embeded($content){
+	//youtube.com\^(?!href=)
+	if (preg_match_all('#(?<!href\=\")https\:\/\/www.youtube.com\/watch\?([\\\&\;\=\w\d]+|)v\=[\w\d]{11}+([\\\&\;\=\w\d]+|)(?!\"\>)#', $content, $youtube_match)) {
+		foreach ($youtube_match[0] as $youtube_url) {
+			parse_str( parse_url( wp_specialchars_decode( $youtube_url ), PHP_URL_QUERY ), $youtube_video );
+			if (isset($youtube_video['v'])){
+				$content = str_replace($youtube_url, '<div class="youtube-wrapper"><div class="youtube-wrapper__video" data-id="'.$youtube_video['v'].'"></div></div>', $content);
+			}
+		}
+	}
+	//youtu.be
+	if (preg_match_all('#(?<!href\=\")https\:\/\/youtu.be/([\\\&\;\=\w\d]+|)(?!\"\>)#', $content, $youtube_match)){
+		foreach ($youtube_match[0] as $youtube_url) {
+			$youtube_video = str_replace('https://youtu.be/', '', $youtube_url);
+			if (isset($youtube_video)){
+				$content = str_replace($youtube_url, '<div class="youtube-wrapper"><div class="youtube-wrapper__video" data-id="'.$youtube_video.'"></div></div>', $content);
+			}
+		}
+	}
+	return $content;
 }
-add_filter('post_class', 'soapatrickseven_remove_postclasses', 10, 3);
+add_filter('the_content', 'oapatrickseven_youtube_embeded',1);

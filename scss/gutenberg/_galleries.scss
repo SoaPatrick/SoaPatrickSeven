@@ -1,0 +1,37 @@
+/*--------------------------------------------------------------
+#Galleries
+--------------------------------------------------------------*/
+
+.blocks-gallery-grid .blocks-gallery-image,
+.blocks-gallery-grid .blocks-gallery-item,
+.wp-block-gallery .blocks-gallery-image,
+.wp-block-gallery .blocks-gallery-item {
+  width: calc((100% - #{$margin__base})/2)
+}
+
+.blocks-gallery-grid .blocks-gallery-image,
+.blocks-gallery-grid .blocks-gallery-item,
+.wp-block-gallery .blocks-gallery-image,
+.wp-block-gallery .blocks-gallery-item {
+  margin: 0 $margin__base $margin__base 0;
+}
+
+@media (min-width: 600px) {
+  @for $i from 3 to 5 {
+    $factor: $i - 1;
+    .blocks-gallery-grid.columns-#{$i} .blocks-gallery-image,
+    .blocks-gallery-grid.columns-#{$i} .blocks-gallery-item,
+    .wp-block-gallery.columns-#{$i} .blocks-gallery-image,
+    .wp-block-gallery.columns-#{$i} .blocks-gallery-item {
+      width:calc((100% - #{$margin__base} * #{$factor})/#{$i});
+      margin-right: $margin__base
+    }
+  }
+}
+
+.blocks-gallery-grid .blocks-gallery-image:last-child,
+.blocks-gallery-grid .blocks-gallery-item:last-child,
+.wp-block-gallery .blocks-gallery-image:last-child,
+.wp-block-gallery .blocks-gallery-item:last-child {
+  margin-right: 0
+}
