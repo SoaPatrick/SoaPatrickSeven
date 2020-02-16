@@ -1,0 +1,33 @@
+/*--------------------------------------------------------------
+#Navigation
+--------------------------------------------------------------*/
+
+.post-navigation {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "previous next";
+  gap: 2rem;
+
+  @media (max-width: 767px) {
+    grid-template-columns: 1fr;
+    grid-template-areas: "next" "previous";
+  }
+
+  &__previous {
+    grid-area: previous;
+    justify-self: start;
+  }
+
+  &__next {
+    grid-area: next;
+    justify-self: end;
+  }
+
+  &__next,
+  &__previous {
+    @media (max-width: 767px) {
+      justify-self: center;
+    }
+  }
+
+}
