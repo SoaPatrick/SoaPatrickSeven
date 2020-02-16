@@ -14,22 +14,14 @@
 		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			soapatrickseven_posted_on();
-			soapatrickseven_posted_by();
-			?>
-		</div>
+      <div class="entry-meta">
+        <?php soapatrickseven_posted_on(); ?>
+        <?php soapatrickseven_tags(); ?>
+      </div>
 		<?php endif; ?>
 	</header>
-
-	<?php soapatrickseven_post_thumbnail(); ?>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
 	</div>
-
-	<footer class="entry-footer">
-		<?php soapatrickseven_tags(); ?>
-	</footer>
 </article>
