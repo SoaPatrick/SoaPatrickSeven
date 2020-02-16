@@ -12,13 +12,11 @@
 ?>
 
       </main>
-	  </div>
+    </div>
 
-    <footer class="site-footer">
-      <div class="site-info">
-        &copy; <?php echo date('Y'); ?> by SoaPatrick
-      </div>
-    </footer>
+    <footer class="site-footer<?php if ( !is_home() || is_paged()) : ?> highlight<?php endif; ?>">
+			<p>Stuff from 2000 to <?php echo date('Y'); ?> by SoaPatrick<a href="<?php echo esc_url( home_url( '/' ) ); ?>log">Seven</a></p>
+	  </footer>
 
 	</div>
 
