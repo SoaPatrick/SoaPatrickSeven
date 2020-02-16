@@ -22,13 +22,14 @@ $font-family__heading: 'AmsiProNarw-Black', sans-serif;
 
 // Font-Sizes
 $font-size__base: calc(18px + .25vw);
-$font-size__h1: 2.2rem; // 44px
-$font-size__h2: 1.5rem; // 30px
-$font-size__h3: 1.2rem; // 24px
-$font-size__h4: 1rem; // 20px
-$font-size__small: 0.8rem; // 16px
-$font-size__large: 1.2rem; // 24px
-$font-size__huge: 4.2rem; // 84px
+$font-size__h1: 2.2rem;
+$font-size__h2: 1.5rem;
+$font-size__h3: 1.2rem;
+$font-size__h4: 1rem;
+$font-size__small: 0.8rem;
+$font-size__medium: calc(22px + 1.5vw);
+$font-size__large: calc(26px + 1.6vw);
+
 
 // Font Line-Height
 $line-height__base: calc(1.5em + .2vw);
@@ -50,6 +51,7 @@ $shadow__half: 0 0 .5rem rgba(0,0,0,.5);
 // Outline
 $outline__width: 3px;
 $outline: $outline__width dotted var(--color__highlight);
+$outline-highlight: $outline__width dotted $color__white;
 
 // Navbar
 $navbar__width: 3rem;
