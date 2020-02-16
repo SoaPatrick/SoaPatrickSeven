@@ -2,6 +2,11 @@
 #Galleries
 --------------------------------------------------------------*/
 
+.blocks-gallery-grid,
+.wp-block-gallery {
+  margin-top: $margin__base;
+}
+
 .blocks-gallery-grid .blocks-gallery-image,
 .blocks-gallery-grid .blocks-gallery-item,
 .wp-block-gallery .blocks-gallery-image,
