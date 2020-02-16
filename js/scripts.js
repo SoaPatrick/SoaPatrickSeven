@@ -5,7 +5,6 @@ window.onload = function(){
     document.getElementById('search-collapse').classList.toggle('open');
     document.getElementById('toggle-search-collapse').classList.toggle('active');
     document.getElementById('bubbles-animated').classList.toggle('hidden');
-    document.getElementById("search-collapse--input").focus();
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     document.getElementById('search-collapse--input').value = "";
@@ -26,6 +25,40 @@ window.onload = function(){
 	};
 };
 
+
+// script to load YouTube Videos only on
+// click on Preview Image
+// ----------------------------------------
+document.addEventListener("DOMContentLoaded",function() {
+  var div, n,
+      v = document.getElementsByClassName("youtube-wrapper__video");
+  for (n = 0; n < v.length; n++) {
+      div = document.createElement("div");
+      div.setAttribute("data-id", v[n].dataset.id);
+      div.innerHTML = ytThumb(v[n].dataset.id);
+      div.onclick = ytIframe;
+      v[n].appendChild(div);
+  }
+});
+
+function ytThumb(id) {
+var thumbRes = (document.body.clientWidth > 640) ? 'maxresdefault.jpg' : 'hqdefault.jpg',
+  thumbImg = '<img src="https://i.ytimg.com/vi/ID/'+thumbRes+'">',
+  thumbBut = '<p class="video--play-btn"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="video--play-btn__bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></p>';
+return thumbImg.replace("ID", id) + thumbBut;
+}
+
+
+function ytIframe() {
+  var iframe = document.createElement("iframe");
+  iframe.setAttribute("src", "https://www.youtube-nocookie.com/embed/" + this.dataset.id + "?autoplay=1");
+  iframe.setAttribute("frameborder", "0");
+  iframe.setAttribute("allowfullscreen", "1");
+  iframe.setAttribute("mute", "1");
+  iframe.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
+  this.parentNode.replaceChild(iframe, this);
+
+}
 
 
 // script to toggle between light and dark

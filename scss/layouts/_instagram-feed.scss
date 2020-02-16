@@ -41,7 +41,7 @@
   }
 
   .carousel-cell {
-    margin-right: 0.5rem;
+    margin-right: $margin__base;
     transition: opacity .5s ease-in-out;
     opacity: .3 ;
 

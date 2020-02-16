@@ -2,6 +2,10 @@
 #Figures
 --------------------------------------------------------------*/
 
+figure {
+  margin: $margin__base 0;
+}
+
 .wp-block-image,
 .wp-block-video {
   margin: $margin__base 0;
