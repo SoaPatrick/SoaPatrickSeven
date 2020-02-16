@@ -8,6 +8,10 @@
 
 	a {
 		font-weight: $font-weight__bold;
-		color: inherit;
+    color: inherit;
+
+    &:focus {
+      outline: $outline-highlight;
+    }
 	}
 }
