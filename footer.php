@@ -16,7 +16,7 @@
 
     <?php
     if ( is_home() && !is_paged() ) :
-      include get_template_directory() . '/layout-parts/instagram-feed.php';
+      get_template_part( 'layout-parts/instagram');
     endif;
     ?>
 

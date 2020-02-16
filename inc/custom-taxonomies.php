@@ -7,4 +7,4 @@
  * @package soapatrickseven
  */
 
-require get_template_directory() . '/tax/tax-factory-tags.php';
+get_template_part( 'tax/tax', 'factory_tags');
