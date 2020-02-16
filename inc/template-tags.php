@@ -8,141 +8,47 @@
  */
 
 if ( ! function_exists( 'soapatrickseven_posted_on' ) ) :
-	/**
-	 * Prints HTML with meta information for the current post-date/time.
-	 */
 	function soapatrickseven_posted_on() {
-		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
-		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
-		}
+    $posted_icon = '<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M400 64h-48V12c0-6.627-5.373-12-12-12h-8c-6.627 0-12 5.373-12 12v52H128V12c0-6.627-5.373-12-12-12h-8c-6.627 0-12 5.373-12 12v52H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V112c0-26.51-21.49-48-48-48zM48 96h352c8.822 0 16 7.178 16 16v48H32v-48c0-8.822 7.178-16 16-16zm352 384H48c-8.822 0-16-7.178-16-16V192h384v272c0 8.822-7.178 16-16 16z"></path></svg>';
+		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+		$time_string = sprintf( $time_string, esc_attr( get_the_date( DATE_W3C ) ), esc_html( get_the_date() ), );
+    $posted_on = '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>';
 
-		$time_string = sprintf( $time_string,
-			esc_attr( get_the_date( DATE_W3C ) ),
-			esc_html( get_the_date() ),
-			esc_attr( get_the_modified_date( DATE_W3C ) ),
-			esc_html( get_the_modified_date() )
-		);
-
-		$posted_on = sprintf(
-			/* translators: %s: post date. */
-			esc_html_x( 'Posted on %s', 'post date', 'soapatrickseven' ),
-			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
-		);
-
-		echo '<span class="posted-on">' . $posted_on . '</span>'; // WPCS: XSS OK.
-
+		echo  '<div class="posted-on">' . $posted_icon, $posted_on .'</div>'; // WPCS: XSS OK.
 	}
 endif;
 
-if ( ! function_exists( 'soapatrickseven_posted_by' ) ) :
-	/**
-	 * Prints HTML with meta information for the current author.
-	 */
-	function soapatrickseven_posted_by() {
-		$byline = sprintf(
-			/* translators: %s: post author. */
-			esc_html_x( 'by %s', 'post author', 'soapatrickseven' ),
-			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
-		);
 
-		echo '<span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
-	}
-endif;
+if ( ! function_exists( 'soapatrickseven_tags' ) ) :
+	function soapatrickseven_tags() {
+    $tag_icon = '<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M625.941 293.823L421.823 497.941c-18.746 18.746-49.138 18.745-67.882 0l-1.775-1.775 22.627-22.627 1.775 1.775c6.253 6.253 16.384 6.243 22.627 0l204.118-204.118c6.238-6.239 6.238-16.389 0-22.627L391.431 36.686A15.895 15.895 0 0 0 380.117 32h-19.549l-32-32h51.549a48 48 0 0 1 33.941 14.059L625.94 225.941c18.746 18.745 18.746 49.137.001 67.882zM252.118 32H48c-8.822 0-16 7.178-16 16v204.118c0 4.274 1.664 8.292 4.686 11.314l211.882 211.882c6.253 6.253 16.384 6.243 22.627 0l204.118-204.118c6.238-6.239 6.238-16.389 0-22.627L263.431 36.686A15.895 15.895 0 0 0 252.118 32m0-32a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882L293.823 497.941c-18.746 18.746-49.138 18.745-67.882 0L14.059 286.059A48 48 0 0 1 0 252.118V48C0 21.49 21.49 0 48 0h204.118zM144 124c-11.028 0-20 8.972-20 20s8.972 20 20 20 20-8.972 20-20-8.972-20-20-20m0-28c26.51 0 48 21.49 48 48s-21.49 48-48 48-48-21.49-48-48 21.49-48 48-48z"></path></svg>';
 
-if ( ! function_exists( 'soapatrickseven_entry_footer' ) ) :
-	/**
-	 * Prints HTML with meta information for the categories, tags and comments.
-	 */
-	function soapatrickseven_entry_footer() {
-		// Hide category and tag text for pages.
 		if ( 'post' === get_post_type() ) {
-			/* translators: used between list items, there is a space after the comma */
-			$categories_list = get_the_category_list( esc_html__( ', ', 'soapatrickseven' ) );
-			if ( $categories_list ) {
-				/* translators: 1: list of categories. */
-				printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'soapatrickseven' ) . '</span>', $categories_list ); // WPCS: XSS OK.
-			}
-
-			/* translators: used between list items, there is a space after the comma */
-			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'soapatrickseven' ) );
+			$tags_list = get_the_tag_list( '', ', ' );
 			if ( $tags_list ) {
-				/* translators: 1: list of tags. */
-				printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'soapatrickseven' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+				echo '<div class="tags">' . $tag_icon .'<span class="tags-links">' . $tags_list . '</span></div>';
 			}
 		}
-
-		if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-			echo '<span class="comments-link">';
-			comments_popup_link(
-				sprintf(
-					wp_kses(
-						/* translators: %s: post title */
-						__( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'soapatrickseven' ),
-						array(
-							'span' => array(
-								'class' => array(),
-							),
-						)
-					),
-					get_the_title()
-				)
-			);
-			echo '</span>';
-		}
-
-		edit_post_link(
-			sprintf(
-				wp_kses(
-					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Edit <span class="screen-reader-text">%s</span>', 'soapatrickseven' ),
-					array(
-						'span' => array(
-							'class' => array(),
-						),
-					)
-				),
-				get_the_title()
-			),
-			'<span class="edit-link">',
-			'</span>'
-		);
 	}
 endif;
 
-if ( ! function_exists( 'soapatrickseven_post_thumbnail' ) ) :
-	/**
-	 * Displays an optional post thumbnail.
-	 *
-	 * Wraps the post thumbnail in an anchor element on index views, or a div
-	 * element when on single views.
-	 */
-	function soapatrickseven_post_thumbnail() {
-		if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
-			return;
-		}
 
-		if ( is_singular() ) :
-			?>
 
-			<div class="post-thumbnail">
-				<?php the_post_thumbnail(); ?>
-			</div><!-- .post-thumbnail -->
+if ( ! function_exists( 'soapatrickseven_post_navigation' ) ) :
+	function soapatrickseven_post_navigation() {
+    echo '<div class="grid"><nav class="post-navigation">';
+    next_post_link( '%link', __( 'Next Post', 'soapatrickseven' ) );
+    previous_post_link('%link', __( 'Previous Post', 'soapatrickseven' ) );
+    echo '</nav></div>';
+	}
+endif;
 
-		<?php else : ?>
 
-		<a class="post-thumbnail" href="<?php the_permalink(); ?>" aria-hidden="true" tabindex="-1">
-			<?php
-			the_post_thumbnail( 'post-thumbnail', array(
-				'alt' => the_title_attribute( array(
-					'echo' => false,
-				) ),
-			) );
-			?>
-		</a>
-
-		<?php
-		endif; // End is_singular().
+if ( ! function_exists( 'soapatrickseven_posts_navigation' ) ) :
+	function soapatrickseven_posts_navigation() {
+    echo '<div class="grid"><nav class="post-navigation">';
+    posts_nav_link( ' ', __( 'Next Posts', 'soapatrickseven' ), __( 'Previous Posts', 'soapatrickseven' ) );
+    echo '</nav></div>';
 	}
 endif;

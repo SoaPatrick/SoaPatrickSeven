@@ -30,6 +30,6 @@
 	</div>
 
 	<footer class="entry-footer">
-		<?php soapatrickseven_entry_footer(); ?>
+		<?php soapatrickseven_tags(); ?>
 	</footer>
 </article>
