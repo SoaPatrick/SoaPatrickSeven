@@ -16,9 +16,17 @@ get_header();
 
   if ( have_posts() ) :
 
-    while ( have_posts() ) :
-      the_post();
+    $postCount = 0;
+    while ( have_posts() ) : the_post();
+      $postCount++;
+      if ( $postCount == 2  && is_home() && !is_paged() ) :
+
+        get_template_part( 'template-parts/content', 'factory_feed' );
+
+      endif;
+
       get_template_part( 'template-parts/content', get_post_type() );
+
     endwhile;
 
     soapatrickseven_posts_navigation();
