@@ -20,7 +20,7 @@ $format = get_post_format();
 				<?php
 					if($format === 'status') :
 			    	if (get_field( "font-awesome_icon" )) :
-					   	echo '<i class="' . get_field( 'font-awesome_icon' ) . '"></i>';
+					   	echo '<i class="' . get_field( "font-awesome_icon" ) . '"></i>';
 						else :
 							echo '<i class="fal fa-bullhorn"></i>';
 						endif;
