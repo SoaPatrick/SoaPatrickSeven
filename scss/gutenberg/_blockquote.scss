@@ -5,7 +5,7 @@
  blockquote.wp-block-quote  {
   margin: $margin__base 0;
 	padding: 0 $margin__base;
-	border-left: 5px solid var(--color__highlight);
+	border-left: $blockquote__border-width solid var(--color__highlight);
 
 	p {
 		font-weight: 400;
@@ -29,8 +29,10 @@
 		}
 	}
 
-	cite {
+  cite,
+  cite em {
 		font-style: normal;
-		font-size: 0.8rem;
+    font-size: 0.8rem;
+    font-weight: $font-weight__regular;
 	}
 }
