@@ -22,7 +22,7 @@ $format = get_post_format();
 			    	if (get_field( "font-awesome_icon" )) :
 					   	echo '<i class="' . get_field( "font-awesome_icon" ) . '"></i>';
 						else :
-							echo '<i class="fal fa-bullhorn"></i>';
+							echo '<i class="fal fa-pencil"></i>';
 						endif;
 					endif;
 					the_content();
