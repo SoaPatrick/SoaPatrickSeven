@@ -43,5 +43,4 @@
     endif;
     ?>
 	  <div class="site-content">
-		  <main class="site-main">
 
