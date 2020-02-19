@@ -13,11 +13,11 @@ get_header();
 
     <div class="grid breadcrumbs-wrapper">
       <nav class="breadcrumbs">
-        <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>">SoaPatrick</a></span>
+        <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'SoaPatrick', 'soapatrickseven' ) ?></a></span>
         <?php if( is_tag() ) : ?>
-          <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/tags/">Tags</a></span>
+          <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/tags/"><?php esc_html_e( 'Tags', 'soapatrickseven' ) ?></a></span>
         <?php else : ?>
-          <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/storage/">Storage</a></span>
+          <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/storage/"><?php esc_html_e( 'Storage', 'soapatrickseven' ) ?></a></span>
         <?php endif; ?>
         <span class="breadcrumbs__item--last"><?php the_archive_title();?></span>
       </nav>

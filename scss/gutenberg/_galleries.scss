@@ -5,6 +5,10 @@
 .blocks-gallery-grid,
 .wp-block-gallery {
   margin-top: $margin__base;
+
+  li::before {
+    content: none;
+  }
 }
 
 .blocks-gallery-grid .blocks-gallery-image,

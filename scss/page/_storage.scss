@@ -1,0 +1,42 @@
+/*--------------------------------------------------------------
+#Storage
+--------------------------------------------------------------*/
+
+.storage {
+	display: flex;
+	flex-wrap: wrap;
+
+	&__year {
+		flex-grow: 0;
+    flex-shrink: 0;
+
+    @media (max-width: 370px) {
+      width: calc(100%/2);
+    }
+
+    @media (min-width: 371px) {
+      width: calc(100%/3);
+    }
+
+    @media (min-width: 768px) {
+      width: calc(100%/4);
+    }
+    @media (min-width: 1200px) {
+      width: calc(100%/5);
+    }
+
+		h2 {
+			margin-bottom: 0;
+		}
+
+		ul {
+      margin-top: 0;
+      list-style: none;
+      padding: 0;
+
+      li::before {
+        content: none;
+      }
+		}
+	}
+}
