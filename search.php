@@ -11,22 +11,20 @@ get_header();
 
   if ( have_posts() ) : ?>
 
-    <header class="page-header">
-      <h1 class="page-title">
-        <?php
-        /* translators: %s: search query. */
-        printf( esc_html__( 'Search Results for: %s', 'soapatrickseven' ), '<span>' . get_search_query() . '</span>' );
-        ?>
+    <header class="grid">
+		  <h1 class="title-large">
+        <?php printf( esc_html__( 'Search: %s', 'soapatrickseven' ), get_search_query() ); ?>
       </h1>
+      <hr>
     </header>
 
     <?php
     while ( have_posts() ) :
       the_post();
-      get_template_part( 'template-parts/content', 'search' );
+      get_template_part( 'template-parts/content', 'list' );
     endwhile;
 
-    the_posts_navigation();
+    soapatrickseven_posts_navigation();
 
   else :
 
