@@ -42,15 +42,3 @@ ul {
 	}
 }
 
-// resent colored bullet list icon for those lists
-ul {
-  &.fa-ul,
-  &.list-style-none,
-  &.wp-block-gallery,
-  &.blocks-gallery-grid {
-
-    li::before {
-      content: none;
-    }
-  }
-}
