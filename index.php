@@ -29,7 +29,11 @@ get_header();
 
     endwhile;
 
-    soapatrickseven_posts_navigation();
+    if (is_single()):
+      soapatrickseven_post_navigation();
+    else:
+      soapatrickseven_posts_navigation();
+    endif;
 
   else :
 
