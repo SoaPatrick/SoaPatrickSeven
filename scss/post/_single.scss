@@ -24,7 +24,7 @@
 
 		p {
 			font-family: $font-family__heading;
-			font-size: 1.2rem;
+			font-size: $font-size__h3;
 			line-height: 1.4;
 			margin-top: 0;
     }
@@ -62,14 +62,14 @@
 			}
 
 			p:last-child {
-        font-size: .8rem;
+        font-size: $font-size__small;
         font-weight: $font-weight__regular;
 			}
 		}
 	}
 
   &__meta {
-    font-size: .9rem;
+    font-size: $font-size__small;
     margin: 1rem 0;
     display: flex;
     flex-wrap: wrap;
