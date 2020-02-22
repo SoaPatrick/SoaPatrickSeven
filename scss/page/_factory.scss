@@ -1,0 +1,38 @@
+/*--------------------------------------------------------------
+#Factory
+--------------------------------------------------------------*/
+
+.factory {
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    text-transform: lowercase;
+
+    a {
+      margin-right: $margin__base / 2;
+      margin-bottom: $margin__base / 2;
+    }
+  }
+
+  &__list {
+    margin: $margin__base 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: $margin__base;
+
+    @media (max-width: 1199px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}

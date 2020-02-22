@@ -24,15 +24,15 @@
 		padding: 0 calc(#{$margin__base} * 2);
 
 		p {
-			font-size: 1.2rem;
-			line-height: 1.4;
+			font-size: $font-size__h3;
+      line-height: 1.4;
 		}
 	}
 
   cite,
   cite em {
 		font-style: normal;
-    font-size: 0.8rem;
+    font-size: $font-size__small;
     font-weight: $font-weight__regular;
 	}
 }
