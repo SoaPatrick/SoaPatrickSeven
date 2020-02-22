@@ -12,10 +12,10 @@ $format = get_post_format();
 
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('post'); ?>>
+<article id="post-<?php the_ID(); ?>" <?php post_class('article post'); ?>>
   <?php if ($format === 'quote' || $format === 'link' || $format === 'status') : ?>
 
-		<header class="grid post__header">
+		<header class="grid article__header">
 			<div class="inner-wrapper inner-wrapper__<?php echo $format ?>">
 				<?php
 					if($format === 'status') :
@@ -28,7 +28,7 @@ $format = get_post_format();
 					the_content();
 		    ?>
 			</div>
-			<div class="post__meta">
+			<div class="article__meta">
         <?php
           soapatrickseven_posted_on();
           soapatrickseven_tags();
@@ -38,10 +38,10 @@ $format = get_post_format();
 
   <?php else : ?>
 
-    <header class="grid post__header">
+    <header class="grid article__header">
       <?php the_title( '<h1 class="title-large">', '</h1>' ); ?>
 
-      <div class="post__meta">
+      <div class="article__meta">
         <?php
           soapatrickseven_posted_on();
           soapatrickseven_tags();
@@ -49,7 +49,7 @@ $format = get_post_format();
       </div>
     </header>
 
-    <div class="grid post__content">
+    <div class="grid article__content">
       <?php the_content(); ?>
     </div>
 

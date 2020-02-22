@@ -25,7 +25,7 @@ get_header();
 
       endif;
 
-      get_template_part( 'template-parts/content', get_post_type() );
+      get_template_part( 'template-parts/content-single', get_post_type() );
 
     endwhile;
 
