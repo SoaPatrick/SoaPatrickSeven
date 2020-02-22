@@ -24,7 +24,7 @@ get_header(); ?>
     </header>
 
     <div class="grid">
-      <div class="tag-list">
+      <div class="tag--list">
         <?php
           $tags = get_tags('post_tag');
           if ( $tags ) :
