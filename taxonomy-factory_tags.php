@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Template Name: Archives Facrtory Items
+ * Template Name: Archives factory tag items
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -14,12 +14,13 @@ get_header(); ?>
     <div class="grid breadcrumbs-wrapper">
       <nav class="breadcrumbs">
         <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'SoaPatrick', 'soapatrickseven' ) ?></a></span>
-        <span class="breadcrumbs--item__last"><?php esc_html_e( 'Factory', 'soapatrickseven' ) ?></span>
+        <span class="breadcrumbs--item"><?php esc_html_e( 'Factory', 'soapatrickseven' ) ?></span>
+        <span class="breadcrumbs--item__last"><?php echo single_term_title(); ?></span>
       </nav>
     </div>
 
     <header class="grid">
-      <h1 class="title-large"><?php esc_html_e( 'Factory', 'soapatrickseven' ) ?></h1>
+      <h1 class="title-large"><?php echo single_term_title(); ?></h1>
       <hr>
     </header>
 
@@ -33,17 +34,14 @@ get_header(); ?>
             'fields'     => 'all',
           );
           $terms = get_terms( 'factory_tags', $args);
-          foreach ( $terms as $term ) {
-            $url = get_term_link( $term );
-            if ( is_wp_error( $url ) ) {
-              continue;
+          $currentTerm = $wp_query->get_queried_object();
+            foreach ( $terms as $term ) {
+              if ($currentTerm->term_id === $term->term_id)
+                echo '<a href="'. get_term_link( $term ) .'" class="btn btn-small btn-active">'. $term->name .'</a>';
+              else {
+                echo '<a href="'. get_term_link( $term ) .'" class="btn btn-small">'. $term->name .'</a>';
+              }
             }
-            printf(
-              '<a href="%s" class="btn btn-small">%s</a>',
-              $url,
-              $term->name
-            );
-          }
         ?>
       </div>
     </div>
@@ -66,3 +64,5 @@ get_header(); ?>
 
 <?php
 get_footer();
+
+
