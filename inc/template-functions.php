@@ -33,6 +33,38 @@ function soapatrickseven_previous_post_link_class($format) {
   return $format;
 }
 
+
+/**
+ * Remove default image sizes from generating
+ *
+ */
+function soapatrickseven_remove_default_image_sizes( $sizes ) {
+  unset( $sizes[ 'medium_large' ]);
+  unset( $sizes[ '1536x1536' ]);
+  unset( $sizes[ '2048x2048' ]);
+
+  return $sizes;
+}
+add_filter( 'intermediate_image_sizes_advanced', 'soapatrickseven_remove_default_image_sizes' );
+
+
+/**
+ * wrap all iframes within content with a div and class
+ *
+ */
+function soapatrickseven_iframe_wrapper($content) {
+	$pattern = '~<iframe.*</iframe>|<embed.*</embed>~';
+	preg_match_all($pattern, $content, $matches);
+
+	foreach ($matches[0] as $match) {
+		$wrappedframe = '<div class="responsive-container">' . $match . '</div>';
+		$content = str_replace($match, $wrappedframe, $content);
+	}
+
+	return $content;
+}
+add_filter('the_content', 'soapatrickseven_iframe_wrapper');
+
 /**
  * Replace Youtube Videos with Preview Image instead
  * of embeded iFrame, play video on click
