@@ -14,7 +14,7 @@ get_header(); ?>
     </div>
 
     <header class="grid">
-      <h1 class="title-large">Factory</h1>
+      <h1 class="title-large"><?php esc_html_e( 'Factory', 'soapatrickseven' ) ?></h1>
       <hr>
     </header>
 

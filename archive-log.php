@@ -7,7 +7,7 @@ get_header(); ?>
 
   <section>
     <header class="grid">
-      <h1 class="title-large">Change Log</h1>
+      <h1 class="title-large"><?php esc_html_e( 'Change Log', 'soapatrickseven' ) ?></h1>
       <hr>
     </header>
     <div class="grid">
