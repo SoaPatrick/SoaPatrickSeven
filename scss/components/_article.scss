@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------
+#Article
+--------------------------------------------------------------*/
+
+.article {
+  &__meta {
+    font-size: $font-size__small;
+    margin: 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+
+    .posted-on {
+      margin-right: 1.5em;
+      margin-bottom: .5em;
+    }
+
+    svg {
+      font-size: inherit;
+      height: 1em;
+      margin-right: .5em;
+      width: 1.25em;
+      vertical-align: -.125em;
+      color: var(--color__highlight);
+      display: inline-block;
+      overflow: visible;
+    }
+  }
+}
