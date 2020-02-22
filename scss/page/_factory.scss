@@ -2,7 +2,7 @@
 #Factory
 --------------------------------------------------------------*/
 
-.factory {
+.factory-list {
 
   &__tags {
     display: flex;
@@ -31,8 +31,6 @@
   }
 
   img {
-    width: 100%;
-    height: auto;
     display: block;
   }
 }

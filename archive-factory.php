@@ -5,7 +5,7 @@ Template Name: Archives Facrtory Items
 
 get_header(); ?>
 
-  <section class="factory">
+  <section class="factory-list">
     <div class="grid breadcrumbs-wrapper">
       <nav class="breadcrumbs">
         <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'SoaPatrick', 'soapatrickseven' ) ?></a></span>
@@ -19,7 +19,7 @@ get_header(); ?>
     </header>
 
     <div class="grid">
-      <div class="factory__tags">
+      <div class="factory-list__tags">
         <?php
           $args = array(
             'orderby'    => 'name',
@@ -44,7 +44,7 @@ get_header(); ?>
     </div>
 
     <div class="grid">
-      <div class="factory__list">
+      <div class="factory-list__list">
         <?php
           if ( have_posts() ) :
             while ( have_posts() ) : the_post();
