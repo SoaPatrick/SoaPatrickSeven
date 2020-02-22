@@ -40,7 +40,7 @@ function soapatrickseven_add_cpt_factory() {
 	);
 	$args = array(
 		'label'                 => __( 'Factory', 'soapatrickseven' ),
-		'description'           => __( 'MCH Factories', 'soapatrickseven' ),
+		'description'           => __( 'Factories', 'soapatrickseven' ),
 		'labels'                => $labels,
 		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
 		'taxonomies'            => array( 'factory_tags' ),
@@ -48,7 +48,7 @@ function soapatrickseven_add_cpt_factory() {
 		'public'                => true,
 		'show_ui'               => true,
 		'show_in_menu'          => true,
-		'menu_position'         => 20,
+		'menu_position'         => 5,
 		'menu_icon'             => 'dashicons-art',
 		'show_in_admin_bar'     => false,
 		'show_in_nav_menus'     => true,

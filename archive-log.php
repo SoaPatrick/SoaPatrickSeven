@@ -1,0 +1,51 @@
+<?php
+/**
+Template Name: Archives Change Logs
+ */
+
+get_header(); ?>
+
+  <section>
+    <header class="grid">
+      <h1 class="title-large">Change Log</h1>
+      <hr>
+    </header>
+    <div class="grid">
+      <div class="changelog">
+        <?php
+          if( have_posts() ) :
+            $day_check = '';
+            while( have_posts() ) : the_post();
+
+              $day = get_the_date('j');
+              if ($day != $day_check) {
+                if ($day_check != '') {
+                  echo '</ul>';
+                }
+                echo '<h2>' . get_the_date() . '</h2><ul>';
+              }
+              $field = get_field_object('changelog_type');
+              $value = $field['value'];
+              $label = $field['choices'][ $value ];
+              ?>
+                <li>
+                  <span>
+                    <i class="<?php echo $value ?>"></i>
+                  </span>
+                  <strong><?php echo $label ?></strong>
+                  <?php the_title(); ?>
+                </li>
+              <?php
+              $day_check = $day;
+
+            endwhile;
+          endif;
+        ?>
+      </div>
+    </div>
+  </section>
+
+  <?php soapatrickseven_posts_navigation(); ?>
+
+<?php
+get_footer();
