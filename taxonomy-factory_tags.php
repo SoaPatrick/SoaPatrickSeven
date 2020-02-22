@@ -14,7 +14,7 @@ get_header(); ?>
     <div class="grid breadcrumbs-wrapper">
       <nav class="breadcrumbs">
         <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php esc_html_e( 'SoaPatrick', 'soapatrickseven' ) ?></a></span>
-        <span class="breadcrumbs--item"><?php esc_html_e( 'Factory', 'soapatrickseven' ) ?></span>
+        <span class="breadcrumbs__item"><a href="<?php echo esc_url( home_url( '/' ) ); ?>/factory/"><?php esc_html_e( 'Factory', 'soapatrickseven' ) ?></a></span>
         <span class="breadcrumbs--item__last"><?php echo single_term_title(); ?></span>
       </nav>
     </div>
@@ -25,7 +25,7 @@ get_header(); ?>
     </header>
 
     <div class="grid">
-      <div class="factory-list__tags">
+      <div class="tag-list">
         <?php
           $args = array(
             'orderby'    => 'name',

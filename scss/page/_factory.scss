@@ -3,18 +3,6 @@
 --------------------------------------------------------------*/
 
 .factory-list {
-
-  &__tags {
-    display: flex;
-    flex-wrap: wrap;
-    text-transform: lowercase;
-
-    a {
-      margin-right: $margin__base / 2;
-      margin-bottom: $margin__base / 2;
-    }
-  }
-
   &__list {
     margin: $margin__base 0;
     display: grid;
