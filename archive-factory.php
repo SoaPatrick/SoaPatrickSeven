@@ -24,7 +24,7 @@ get_header(); ?>
     </header>
 
     <div class="grid">
-      <div class="tags-list">
+      <div class="tag-list">
         <?php
           $args = array(
             'orderby'    => 'name',

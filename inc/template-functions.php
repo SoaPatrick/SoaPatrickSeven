@@ -71,3 +71,96 @@ function soapatrickseven_archive_title( $title ) {
 	return preg_replace( '#^[\w\d\s]+:\s*#', '', strip_tags( $title ) );
 }
 add_filter( 'get_the_archive_title', 'soapatrickseven_archive_title' );
+
+
+/**
+ * Adding simple page title to home page
+ *
+ */
+function soapatrickseven_home_page_title( $title ) {
+  if ( is_home() ):
+    return get_bloginfo('name');
+  endif;
+}
+add_filter( 'pre_get_document_title', 'soapatrickseven_home_page_title' );
+
+
+/**
+ * Adding noindex to specific pages that shouldn't be indexed
+ *
+ */
+function soapatrickseven_add_robots_noindes($output) {
+  if($paged > 1 || is_author() || is_tag() || is_date() || is_attachment() || is_singular('log') || is_post_type_archive('log') || is_tax('factory_tags') || is_page('storage') || is_page('tags')) {
+    echo '<meta name="robots" content="noindex">';
+  }
+}
+add_action('wp_head', 'soapatrickseven_add_robots_noindes', 1);
+
+
+/**
+ * Adding the Open Graph in the Language Attributes
+ *
+ */
+function soapatrickseven_add_opengraph_doctype($output) {
+	return $output . ' xmlns:og="http://opengraphprotocol.org/schema/" xmlns:fb="http://www.facebook.com/2008/fbml"';
+}
+add_action('wp_head', 'soapatrickseven_add_opengraph_doctype', 1);
+
+
+/**
+ * add Open Graph Meta Info
+ *
+ */
+function soapatrickseven_add_opengraph_infos() {
+
+	global $post;
+	$default_image = get_template_directory_uri().'/favicon/android-chrome-512x512.png';
+
+	// if page is not single
+	if ( !is_singular() ) {
+		echo '<meta name="description" content="' . get_bloginfo('description') . '"/>';
+		echo '<meta property="og:type" content="article"/>';
+		echo '<meta property="og:title" content="' . get_bloginfo('name') . '"/>';
+		echo '<meta property="og:description" content="' . get_bloginfo('description') . '"/>';
+		echo '<meta property="og:image" content="' . $default_image . '"/>';
+		echo '<meta name="twitter:image" content="' . $default_image . '"/>';
+		return;
+	}
+
+	// if post has excerpt or not
+	if ($excerpt = $post->post_excerpt) {
+    $excerpt = esc_html(strip_tags($post->post_excerpt));
+	} else {
+		$excerpt = esc_html(wp_trim_words($post->post_content,20));
+	}
+
+	// basic meta infos
+	echo '<meta name="description" content="' . $excerpt . '"/>';
+	echo '<meta property="og:type" content="article"/>';
+	echo '<meta property="og:title" content="' . get_the_title() . '"/>';
+	echo '<meta property="og:description" content="' . $excerpt . '"/>';
+	echo '<meta property="og:url" content="' . get_permalink() . '"/>';
+	echo '<meta property="og:site_name" content="' . get_bloginfo() . '"/>';
+
+	// if post has featured image or not
+	if ( !has_post_thumbnail($post->ID) ) {
+		echo '<meta property="og:image" content="' . $default_image . '"/>';
+	} else {
+	$thumbnail_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
+		echo '<meta property="og:image" content="' . esc_attr($thumbnail_src[0]) . '"/>';
+	}
+
+	echo '<meta name="twitter:title" content="' . get_the_title() . '"/>';
+	echo '<meta name="twitter:card" content="summary" />';
+	echo '<meta name="twitter:description" content="' . $excerpt . '" />';
+	echo '<meta name="twitter:url" content="' . get_permalink() . '"/>';
+
+	// if post has featured image or not
+	if ( !has_post_thumbnail($post->ID) ) {
+		echo '<meta name="twitter:image" content="' . $default_image . '"/>';
+	} else {
+		$thumbnail_src = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'medium');
+		echo '<meta name="twitter:image" content="' . esc_attr($thumbnail_src[0]) . '"/>';
+	}
+}
+add_action('wp_head', 'soapatrickseven_add_opengraph_infos', 1);

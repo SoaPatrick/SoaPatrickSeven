@@ -4,12 +4,11 @@
 
 .site-header--not-home {
 	position: absolute;
-	width: 100%;
-	height: 16vw;
+  width: 100%;
+  z-index: -1;
 
   .bubbles-row {
 		position: relative;
-    z-index: -1;
 		fill: var(--color__highlight);
 
     &__third {
