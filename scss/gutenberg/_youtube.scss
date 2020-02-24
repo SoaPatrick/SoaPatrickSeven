@@ -45,14 +45,18 @@
 		height: 2.5em;
 		margin: 0;
 
-		&:hover{
+		&:hover {
 			cursor: pointer;
 
 			.video--play-btn__bg {
 				fill: #f00;
-				fill-opacity: 1;
+        fill-opacity: 1;
 			}
-		}
+    }
+
+    &:focus {
+      outline: $outline;
+    }
 	}
 }
 

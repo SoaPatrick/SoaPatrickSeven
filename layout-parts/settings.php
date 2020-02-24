@@ -10,7 +10,7 @@
 <div id="settings">
   <div class="container">
     <div id="settings__header"></div>
-    <button id="settings__close">
+    <button type="button" id="settings__close" aria-label="<?php esc_html_e( 'Close Settings', 'soapatrickseven' ); ?>">
       <i class="fal fa-times fa-fw"></i>
     </button>
     <h2>Settings</h2>
