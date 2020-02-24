@@ -49,6 +49,26 @@ add_filter( 'intermediate_image_sizes_advanced', 'soapatrickseven_remove_default
 
 
 /**
+ * Attach a class to linked images' parent anchors
+ * Works for existing content
+ *
+ */
+function soapatrickseven_give_linked_images_class($content) {
+	$classes = 'img-link'; // separate classes by spaces - 'img image-link'
+	// check if there are already a class property assigned to the anchor
+	if ( preg_match('/<a.*? class=".*?"><img/', $content) ) {
+		// If there is, simply add the class
+		$content = preg_replace('/(<a.*? class=".*?)(".*?><img)/', '$1 ' . $classes . '$2', $content);
+	} else {
+		// If there is not an existing class, create a class property
+		$content = preg_replace('/(<a.*?)><img/', '$1 class="' . $classes . '" ><img', $content);
+	}
+	return $content;
+}
+add_filter('the_content','soapatrickseven_give_linked_images_class');
+
+
+/**
  * wrap all iframes within content with a div and class
  *
  */
