@@ -20,7 +20,9 @@
     ?>
 
     <footer class="site-footer<?php if ( !is_home() || is_paged()) : ?> highlight<?php endif; ?>">
-			<p>Stuff from 2000 to <?php echo date('Y'); ?> by SoaPatrick<a href="<?php echo esc_url( home_url( '/' ) ); ?>log">Seven</a></p>
+			<p>
+        <?php echo sprintf( __( 'Stuff from 2000 to %s by SoaPatrick<a href="%s">Seven</a>', 'soapatrickseven' ), date('Y'), esc_url( home_url( '/log' )) ); ?>
+      </p>
 	  </footer>
 
 	</div>

@@ -13,7 +13,7 @@
     <button type="button" id="settings__close" aria-label="<?php esc_html_e( 'Close Settings', 'soapatrickseven' ); ?>">
       <i class="fal fa-times fa-fw"></i>
     </button>
-    <h2>Settings</h2>
+    <h2><?php esc_html_e( 'Settings', 'soapatrickseven' ); ?></h2>
     <div class="theme-switch-wrapper">
       <i class="fal fa-lightbulb-slash"></i>
       <label class="theme-switch" for="light-dark-switch">
