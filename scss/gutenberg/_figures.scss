@@ -56,6 +56,12 @@ figure {
     img {
       border: 1px solid var(--color__highlight);
     }
+
+    &:focus {
+      img {
+        outline: $outline;
+      }
+    }
   }
 }
 

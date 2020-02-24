@@ -25,4 +25,35 @@
       overflow: visible;
     }
   }
+
+  &__content {
+    hr {
+      width: 33%;
+    }
+
+    a[target="_blank"] {
+      &::after {
+        display: none;
+        font-family: "Font Awesome 5 Duotone";
+        content: "\f35d";
+      }
+
+      &.img-link::after {
+        content: none;
+      }
+
+      > .svg-inline--fa {
+        font-size: .6em;
+        margin: 0 .05em .05em .4em;
+
+        .fa-secondary {
+          fill: var(--color__text);
+        }
+
+        .fa-primary {
+          fill: currentColor;
+        }
+      }
+    }
+  }
 }
