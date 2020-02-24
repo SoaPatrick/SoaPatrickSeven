@@ -11,7 +11,7 @@
 
 <section class="factory-feed highlight">
 	<div class="grid">
-		<h1 class="title-large text-center"><i class="fal fa-industry-alt fa-fw"></i>Factory Feed</h1>
+		<h1 class="title-large text-center"><i class="fal fa-industry-alt fa-fw"></i><?php esc_html_e( 'Factory Feed', 'soapatrickseven' ); ?></h1>
 		<div class="factory-feed__items">
 			<?php
 				$args = array(
@@ -29,7 +29,9 @@
 				  wp_reset_postdata();
 				endif;
 			?>
-		</div>
-		<p class="lead">The rest can be seen <a href="<?php echo esc_url( home_url( '/' ) ); ?>factory">in the Factory</a>.</p>
+    </div>
+		<p class="lead">
+      <?php echo sprintf( __( 'The rest can be seen <a href="%s">in the Factory</a>.', 'soapatrickseven' ), esc_url( home_url( '/factory' ) )); ?>
+    </p>
 	</div>
 </section>
