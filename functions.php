@@ -13,4 +13,4 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/custom-post-type.php';
 require get_template_directory() . '/inc/custom-taxonomies.php';
-require get_template_directory() . '/inc/custom-acf-fields.php';
+//require get_template_directory() . '/inc/custom-acf-fields.php';
