@@ -55,5 +55,9 @@ body {
     > article:first-child {
       padding-top: 0;
     }
+
+    > article:nth-last-child(2) {
+      padding-bottom: 4rem;
+    }
 	}
 }
