@@ -30,6 +30,7 @@
 	&__icon {
     grid-area: icon;
 		background: var(--color__highlight);
+    color: $color__white;
 		border-radius: 50%;
 		display: flex;
 		justify-content: center;
@@ -48,7 +49,6 @@
 
 		.svg-inline--fa {
 			font-size: 1.5rem;
-      color: $color__white;
 
       @media (max-width: 767px) {
         font-size: 1rem;

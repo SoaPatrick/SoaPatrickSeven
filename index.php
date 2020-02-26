@@ -30,12 +30,16 @@ get_header();
     endwhile;
 
     if (is_single()):
-      soapatrickseven_post_navigation();
-    else:
-      soapatrickseven_posts_navigation();
-    endif;
 
-  else :
+      get_template_part( 'template-parts/content-related', get_post_type() );
+
+    else:
+
+      soapatrickseven_posts_navigation();
+
+    endif;
+    ?>
+  <?php else :
 
     get_template_part( 'template-parts/content', 'none' );
 

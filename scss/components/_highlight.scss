@@ -13,5 +13,10 @@
     &:focus {
       outline: $outline-highlight;
     }
-	}
+  }
+
+  .post-list__icon {
+    background: $color__white;
+    color: var(--color__highlight);
+  }
 }

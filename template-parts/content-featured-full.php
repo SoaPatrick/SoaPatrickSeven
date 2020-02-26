@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying factory list items.
+ * Template part for displaying featured image full
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
