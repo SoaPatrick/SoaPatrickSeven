@@ -34,36 +34,36 @@
 		<?php the_content(); ?>
 	</div>
 
-  <div class="grid">
-    <div class="related-posts">
-      <?php
-        $term = get_field('project');
-        if( $term ):
-          $args = array(
-          'post_type'   => 'post',
-          'tax_query'   => array(
-              array(
-              'taxonomy'  => 'projects',
-              'field'     => 'term_id',
-              'terms'     => $term
-              )
-            )
-          );
-          $projects = new WP_Query( $args );
-          if( $projects->have_posts() ) :
-            echo '<h2>'. __( 'Related Posts', 'soapatrickseven' ) .'</h2>';
-            echo '<ul>';
-            while( $projects->have_posts() ) : $projects->the_post();
-              ?>
-                <li><a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>" aria-label="<?php the_title(); ?>"><?php the_title(); ?></a></li>
-              <?php
-            endwhile;
-            echo '</ul>';
-            wp_reset_postdata();
-          endif;
 
-        endif;
-      ?>
-    </div>
-	</div>
+  <?php
+    $term = get_field('project');
+    if( $term ):
+      $args = array(
+      'post_type'   => 'post',
+      'tax_query'   => array(
+          array(
+          'taxonomy'  => 'projects',
+          'field'     => 'term_id',
+          'terms'     => $term
+          )
+        )
+      );
+      $projects = new WP_Query( $args );
+      if( $projects->have_posts() ) :
+        ?>
+          <section class="related related--post">
+            <div class="related__items related--post__items">
+              <?php
+                while( $projects->have_posts() ) : $projects->the_post();
+                  get_template_part( 'template-parts/content', 'list' );
+                endwhile;
+              ?>
+            </div>
+          </section>
+        <?php
+        wp_reset_postdata();
+      endif;
+    endif;
+  ?>
+
 </article>
