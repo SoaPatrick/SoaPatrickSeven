@@ -6,9 +6,10 @@
 	color: $color__white;
 	background: var(--color__highlight);
 
-	a {
-		font-weight: $font-weight__bold;
-    color: inherit;
+  a,
+  .post-list .title-list a {
+    color: $color__gray--dark;
+//    font-weight: $font-weight__bold;
 
     &:focus {
       outline: $outline-highlight;
@@ -18,5 +19,9 @@
   .post-list__icon {
     background: $color__white;
     color: var(--color__highlight);
+
+    &--image {
+      background: none;
+    }
   }
 }
