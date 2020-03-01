@@ -71,15 +71,27 @@ $blockquote__border-width: 5px;
 }
 
 [data-theme="dark"] {
-  --color__bg: #{$color__gray--darker};
+  --color__body: #{$color__gray--darker};
   --color__wrapper: #{$color__gray--dark};
   --color__text: #{$color__white};
+
+  --color__code--green: rgb(180,213,131);
+  --color__code--blue: rgb(129,207,238);
+  --color__code--red: rgb(240,113,120);
+  --color__code--purple: rgb(199,146,234);
+  --color__code--gray: #999;
 }
 
 [data-theme="light"] {
-	--color__bg: #{$color__gray--light};
+	--color__body: #{$color__gray--light};
 	--color__wrapper: #{$color__white};
-	--color__text: #{$color__gray--dark};
+  --color__text: #{$color__gray--dark};
+
+  --color__code--green: rgb(145,184,89);
+  --color__code--blue: rgb(57,173,181);
+  --color__code--red: rgb(255,83,112);
+  --color__code--purple: rgb(124,77,255);
+  --color__code--gray: #aeaeae;
 }
 
 [data-color="amber"] { --color__highlight: var(--amber); }
