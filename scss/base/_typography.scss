@@ -47,38 +47,6 @@ a {
 }
 
 /*
- * Pre and Code
- * -----------------------------------------------------------
- */
-
-code,
-pre {
-  background: var(--color__bg);
-  border-radius: .2em;
-  line-height: 1;
-  font-size: $font-size__small;
-}
-
-code {
-  padding: .3em;
-  display: inline-block;
-  line-height: 1;
-}
-
-pre  {
-	overflow-x: auto;
-	padding: 0;
-  border: 0;
-
-	code {
-    background: transparent;
-    padding: 1rem;
-    display: block;
-    line-height: initial;
-	}
-}
-
-/*
  * Misc Elements
  * -----------------------------------------------------------
  */
