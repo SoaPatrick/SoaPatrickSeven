@@ -292,16 +292,16 @@ add_action('wp_head', 'soapatrickseven_add_opengraph_infos', 1);
  */
 function soapatrickseven_body_class( $wp_classes, $extra_classes ) {
   // List of the only WP generated classes allowed
-  $whitelist = array();
+  $whitelist = array( 'admin-bar', 'single' );
 
   // List of the only WP generated classes that are not allowed
   $blacklist = array( 'home', 'blog', 'archive', 'single', 'category', 'tag', 'error404', 'logged-in', 'admin-bar' );
 
   // Filter the body classes
   // Whitelist result: (comment if you want to blacklist classes)
-  # $wp_classes = array_intersect( $wp_classes, $whitelist );
+  $wp_classes = array_intersect( $wp_classes, $whitelist );
   // Blacklist result: (uncomment if you want to blacklist classes)
-  $wp_classes = array_diff( $wp_classes, $blacklist );
+  # $wp_classes = array_diff( $wp_classes, $blacklist );
 
   // Add the extra classes back untouched
   return array_merge( $wp_classes, (array) $extra_classes );
