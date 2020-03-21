@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: Archives Page
+ * Template Name: Storage Page
  *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package soapatrickseven
  */
@@ -22,6 +22,7 @@ get_header();
       <h1 class="title-large"><?php esc_html_e( 'Storage', 'soapatrickseven' ) ?></h1>
       <hr>
     </header>
+
     <div class="grid">
       <div class="storage">
         <?php

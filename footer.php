@@ -15,7 +15,7 @@
 
     <?php
     if ( is_home() && !is_paged() ) :
-      get_template_part( 'layout-parts/instagram');
+      get_template_part( 'template-partials/layout/instagram');
     endif;
     ?>
 
