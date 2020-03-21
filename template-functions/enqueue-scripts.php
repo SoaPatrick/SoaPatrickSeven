@@ -9,7 +9,7 @@
 
 function soapatrickseven_scripts() {
 	wp_enqueue_style( 'soapatrickseven-style', get_stylesheet_uri() );
-  wp_enqueue_script( 'soapatrickseven-scripts', get_template_directory_uri() . '/js/scripts.js', '','' , true );
+  wp_enqueue_script( 'soapatrickseven-scripts', get_template_directory_uri() . '/assets/js/scripts.js', '','' , true );
   wp_enqueue_script( 'prettify', 'https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js', '','' , true );
 }
 add_action( 'wp_enqueue_scripts', 'soapatrickseven_scripts' );

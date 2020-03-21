@@ -7,5 +7,5 @@
  * @package soapatrickseven
  */
 
-get_template_part( 'cpt/cpt', 'factory');
-get_template_part( 'cpt/cpt', 'log');
+get_template_part( 'template-types/cpt/cpt', 'factory');
+get_template_part( 'template-types/cpt/cpt', 'log');
