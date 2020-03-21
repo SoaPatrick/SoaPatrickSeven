@@ -21,17 +21,17 @@ get_header();
       $postCount++;
       if ( $postCount == 2  && is_home() && !is_paged() ) :
 
-        get_template_part( 'partials/content/content', 'factory_feed' );
+        get_template_part( 'template-partials/content/content', 'factory_feed' );
 
       endif;
 
-      get_template_part( 'partials/content/content-single', get_post_type() );
+      get_template_part( 'template-partials/content/content-single', get_post_type() );
 
     endwhile;
 
     if (is_single()):
 
-      get_template_part( 'partials/content/content-related', get_post_type() );
+      get_template_part( 'template-partials/content/content-related', get_post_type() );
 
     else:
 
@@ -41,7 +41,7 @@ get_header();
     ?>
   <?php else :
 
-    get_template_part( 'partials/content/content', 'none' );
+    get_template_part( 'template-partials/content/content', 'none' );
 
   endif;
 

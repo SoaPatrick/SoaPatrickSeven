@@ -32,7 +32,7 @@ if( $terms ):
           <?php
             if ($related_items->have_posts()) :
               while ( $related_items->have_posts() ) : $related_items->the_post();
-                get_template_part( 'partials/content/content', 'featured-full' );
+                get_template_part( 'template-partials/content/content', 'featured-full' );
               endwhile;
             endif;
           ?>

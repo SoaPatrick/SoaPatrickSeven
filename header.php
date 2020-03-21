@@ -19,27 +19,27 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
   <?php
     wp_head();
-    get_template_part( 'partials/head/fontlicense');
-    get_template_part( 'partials/head/favicon');
-    get_template_part( 'partials/head/fontawesome');
-    get_template_part( 'partials/head/theme-script');
+    get_template_part( 'template-partials/head/fontlicense');
+    get_template_part( 'template-partials/head/favicon');
+    get_template_part( 'template-partials/head/fontawesome');
+    get_template_part( 'template-partials/head/theme-script');
   ?>
 </head>
 
 <body <?php body_class(); ?>>
 
   <?php
-    get_template_part( 'partials/layout/settings');
-    get_template_part( 'partials/layout/search');
-    get_template_part( 'partials/layout/navigation');
+    get_template_part( 'template-partials/layout/settings');
+    get_template_part( 'template-partials/layout/search');
+    get_template_part( 'template-partials/layout/navigation');
   ?>
 
 	<div class="site-wrapper">
     <?php
       if ( is_home() && !is_paged() ) :
-        get_template_part( 'partials/layout/header', 'home');
+        get_template_part( 'template-partials/layout/header', 'home');
       else :
-        get_template_part( 'partials/layout/header', 'not_home');
+        get_template_part( 'template-partials/layout/header', 'not_home');
       endif;
     ?>
 	  <div class="site-content">

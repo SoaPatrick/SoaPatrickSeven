@@ -55,7 +55,7 @@
             <div class="related__items related--post__items">
               <?php
                 while( $projects->have_posts() ) : $projects->the_post();
-                  get_template_part( 'partials/content/content', 'list' );
+                  get_template_part( 'template-partials/content/content', 'list' );
                 endwhile;
               ?>
             </div>
