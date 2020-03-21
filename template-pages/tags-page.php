@@ -2,13 +2,13 @@
 /**
  * Template Name: Tags Page
  *
- * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package soapatrickseven
  */
 
-
-get_header(); ?>
+get_header();
+?>
 
   <section>
     <div class="grid breadcrumbs-wrapper">
@@ -39,4 +39,5 @@ get_header(); ?>
 
 </section>
 
-<?php get_footer();
+<?php
+get_footer();

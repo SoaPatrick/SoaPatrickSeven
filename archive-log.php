@@ -1,6 +1,10 @@
 <?php
 /**
-Template Name: Archives Change Logs
+ * The template for displaying change lot archive items
+ *
+ * @link https://codex.wordpress.org/Template_Hierarchy
+ *
+ * @package soapatrickseven
  */
 
 get_header(); ?>

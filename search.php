@@ -21,14 +21,14 @@ get_header();
     <?php
     while ( have_posts() ) :
       the_post();
-      get_template_part( 'template-parts/content', 'list' );
+      get_template_part( 'partials/content/content', 'list' );
     endwhile;
 
     soapatrickseven_posts_navigation();
 
   else :
 
-    get_template_part( 'template-parts/content', 'none' );
+    get_template_part( 'partials/content/content', 'none' );
 
   endif;
 
