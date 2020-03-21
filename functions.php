@@ -7,9 +7,9 @@
  * @package soapatrickseven
  */
 
-require get_template_directory() . '/template-functions/theme-setup.php';
-require get_template_directory() . '/template-functions/enqueue-scripts.php';
+require get_template_directory() . '/template-functions/setup.php';
+require get_template_directory() . '/template-functions/enqueue.php';
 require get_template_directory() . '/template-functions/customizer.php';
-require get_template_directory() . '/template-functions/template-functions.php';
+require get_template_directory() . '/template-functions/functions.php';
 require get_template_directory() . '/template-functions/custom-post-type.php';
-require get_template_directory() . '/template-functions/custom-taxonomies.php';
+require get_template_directory() . '/template-functions/taxonomies.php';
