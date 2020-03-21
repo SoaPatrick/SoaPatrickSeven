@@ -5,7 +5,25 @@
  * @package soapatrickseven
  */
 
+/**
+ * Allow only certain Gutenberg Blocks
+ */
+function soapatrickseven_allowed_block_types( $allowed_blocks ) {
 
+	return array(
+    'core/paragraph',
+    'core/image',
+    'core/heading',
+    'core/gallery',
+    'core/list',
+    'core/quote',
+    'core/video',
+    'core/code',
+    'core/columns',
+    'core-embed/youtube',
+	);
+}
+add_filter( 'allowed_block_types', 'soapatrickseven_allowed_block_types' );
 
 /**
  * posted on functions for blog posts
@@ -158,7 +176,7 @@ add_filter('the_content', 'soapatrickseven_iframe_wrapper');
  * of embeded iFrame, play video on click
  *
  */
-function oapatrickseven_youtube_embeded($content){
+function soapatrickseven_youtube_embeded($content){
 	//youtube.com\^(?!href=)
 	if (preg_match_all('#(?<!href\=\")https\:\/\/www.youtube.com\/watch\?([\\\&\;\=\w\d]+|)v\=[\w\d]{11}+([\\\&\;\=\w\d]+|)(?!\"\>)#', $content, $youtube_match)) {
 		foreach ($youtube_match[0] as $youtube_url) {
@@ -179,7 +197,7 @@ function oapatrickseven_youtube_embeded($content){
 	}
 	return $content;
 }
-add_filter('the_content', 'oapatrickseven_youtube_embeded',1);
+add_filter('the_content', 'soapatrickseven_youtube_embeded',1);
 
 
 /**
