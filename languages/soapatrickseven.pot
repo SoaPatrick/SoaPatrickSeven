@@ -1,186 +1,512 @@
-# Copyright (C) 2017 Automattic
-# This file is distributed under the GNU General Public License v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: _s 1.0.0\n"
-"Report-Msgid-Bugs-To: https://wordpress.org/tags/_s\n"
-"POT-Creation-Date: 2016-12-23 16:00+0100\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: SoaPatrickSeven\n"
+"POT-Creation-Date: 2020-03-21 12:58+0100\n"
+"PO-Revision-Date: 2020-03-21 12:57+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2017-MO-DA HO:MI+ZONE\n"
-"Last-Translator:\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
-"X-Generator: grunt-wp-i18n 0.5.4\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: style.css\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+"X-Poedit-SearchPathExcluded-1: vendor\n"
+"X-Poedit-SearchPathExcluded-2: node_modules\n"
 
-#: 404.php:17
-msgid "Oops! That page can&rsquo;t be found."
+#. Author of the plugin/theme
+#: archive-factory.php:15 archive.php:16 taxonomy-factory_tags.php:15
+#: template-pages/storage-page.php:16 template-pages/tags-page.php:16
+#: template-partials/content/content-single-factory.php:16
+msgid "SoaPatrick"
 msgstr ""
 
-#: 404.php:21
-msgid ""
-"It looks like nothing was found at this location. Maybe try one of the "
-"links below or a search?"
+#: archive-factory.php:16 archive-factory.php:21 taxonomy-factory_tags.php:16
+#: template-partials/content/content-single-factory.php:17
+#: template-partials/layout/navigation.php:25
+#: template-partials/layout/navigation.php:26
+#: template-types/cpt/cpt-factory.php:16 template-types/cpt/cpt-factory.php:42
+msgid "Factory"
 msgstr ""
 
-#: 404.php:30
-msgid "Most Used Categories"
+#: archive-log.php:14
+msgid "Change Log"
 msgstr ""
 
-#: 404.php:47
-#. translators: %1$s: smiley
-msgid "Try looking in the monthly archives. %1$s"
+#: archive.php:18 template-pages/tags-page.php:17
+#: template-pages/tags-page.php:22
+msgid "Tags"
 msgstr ""
 
-#: comments.php:34
-#. translators: 1: title.
-msgid "One thought on &ldquo;%1$s&rdquo;"
-msgstr ""
-
-#: comments.php:67
-msgid "Comments are closed."
-msgstr ""
-
-#: footer.php:18
-msgid "https://wordpress.org/"
-msgstr ""
-
-#: footer.php:20
-#. translators: %s: CMS name, i.e. WordPress.
-msgid "Proudly powered by %s"
+#: archive.php:20 template-pages/storage-page.php:17
+#: template-pages/storage-page.php:22
+#: template-partials/layout/navigation.php:18
+#: template-partials/layout/navigation.php:19
+msgid "Storage"
 msgstr ""
 
 #: footer.php:25
-#. translators: 1: Theme name, 2: Theme author.
-msgid "Theme: %1$s by %2$s."
+#, php-format
+msgid "Stuff from 2000 to %s by SoaPatrick/<a href=\"%s\">Seven</a>"
 msgstr ""
 
-#: functions.php:47
+#: footer.php:28 footer.php:29
+msgid "Data Protection"
+msgstr ""
+
+#: search.php:16
+#, php-format
+msgid "Search: %s"
+msgstr ""
+
+#: searchform.php:12
+msgid "Find Stuff..."
+msgstr ""
+
+#: template-functions/template-functions.php:56
+msgid "Next Entry"
+msgstr ""
+
+#: template-functions/template-functions.php:57
+msgid "Previous Entry"
+msgstr ""
+
+#: template-functions/template-functions.php:70
+msgid "Next Entries"
+msgstr ""
+
+#: template-functions/template-functions.php:70
+msgid "Previous Entries"
+msgstr ""
+
+#: template-functions/theme-setup.php:28
 msgid "Primary"
 msgstr ""
 
-#: functions.php:105
-msgid "Sidebar"
+#: template-partials/content/content-factory_feed.php:14
+msgid "Factory Feed"
 msgstr ""
 
-#: functions.php:107
-msgid "Add widgets here."
+#: template-partials/content/content-factory_feed.php:34
+#, php-format
+msgid "The rest can be seen <a href=\"%s\">in the Factory</a>."
 msgstr ""
 
-#: header.php:24
-msgid "Skip to content"
+#: template-partials/content/content-none.php:17
+msgid "I found nothing!"
 msgstr ""
 
-#: header.php:45
-msgid "Primary Menu"
+#: template-partials/content/content-none.php:19
+msgid "Something went wrong!"
 msgstr ""
 
-#: inc/template-tags.php:52
-#. translators: used between list items, there is a space after the comma
-msgid ", "
-msgstr ""
-
-#: inc/template-tags.php:55
-#. translators: 1: list of categories.
-msgid "Posted in %1$s"
-msgstr ""
-
-#: inc/template-tags.php:62
-#. translators: 1: list of tags.
-msgid "Tagged %1$s"
-msgstr ""
-
-#: inc/template-tags.php:72
-#. translators: %s: post title
-msgid "Leave a Comment<span class=\"screen-reader-text\"> on %s</span>"
-msgstr ""
-
-#: inc/template-tags.php:89 partials/content/content-page.php:35
-#. translators: %s: Name of current post. Only visible to screen readers
-msgid "Edit <span class=\"screen-reader-text\">%s</span>"
-msgstr ""
-
-#: search.php:21
-#. translators: %s: search query.
-msgid "Search Results for: %s"
-msgstr ""
-
-#: partials/content/content-none.php:14
-msgid "Nothing Found"
-msgstr ""
-
-#: partials/content/content-none.php:25
-#. translators: 1: link to WP admin new post page.
-msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
-msgstr ""
-
-#: partials/content/content-none.php:38
+#: template-partials/content/content-none.php:29
 msgid ""
-"Sorry, but nothing matched your search terms. Please try again with some "
-"different keywords."
+"Sorry, but I can&rsquo;t find what you&rsquo;re looking for. Please try "
+"again with other words."
 msgstr ""
 
-#: partials/content/content-none.php:44
+#: template-partials/content/content-none.php:31
 msgid ""
-"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
-"searching can help."
+"It seems I can&rsquo;t find what you&rsquo;re looking for. Try finding it?"
 msgstr ""
 
-#: partials/content/content-page.php:22 partials/content/content.php:45
-msgid "Pages:"
+#: template-partials/content/content-related-factory.php:29
+msgid "Related Factory Items"
 msgstr ""
 
-#: partials/content/content.php:34
-#. translators: %s: Name of current post. Only visible to screen readers
-msgid "Continue reading<span class=\"screen-reader-text\"> \"%s\"</span>"
+#: template-partials/content/content-related.php:29
+msgid "Related Blog Posts"
+msgstr ""
+
+#: template-partials/layout/instagram.php:13
+msgid "Instagram Feed"
+msgstr ""
+
+#: template-partials/layout/instagram.php:15
+#, php-format
+msgid ""
+"If you have the time and feel like it, why don&rsquo;t you <a href=\"%s\" "
+"target=\"_blank\" rel=\"noopener\">follow me</a> on Instagram?"
+msgstr ""
+
+#: template-partials/layout/navigation.php:32
+#: template-partials/layout/navigation.php:33
+#: template-partials/layout/settings.php:16
+msgid "Settings"
+msgstr ""
+
+#: template-partials/layout/navigation.php:39
+#: template-partials/layout/navigation.php:40
+msgid "Find Stuff"
+msgstr ""
+
+#: template-partials/layout/settings.php:13
+msgid "Close Settings"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:13
+msgctxt "Post Type General Name"
+msgid "Factories"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:14
+msgctxt "Post Type Singular Name"
+msgid "Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:15 template-types/cpt/cpt-factory.php:43
+msgid "Factories"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:17
+msgid "Factory Archives"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:18
+msgid "Factory Attributes"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:19
+msgid "Parent Factory:"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:20
+msgid "All Factories"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:21
+msgid "Add New Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:22 template-types/cpt/cpt-log.php:22
+msgid "Add New"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:23
+msgid "New Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:24
+msgid "Edit Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:25
+msgid "Update Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:26
+msgid "View Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:27
+msgid "View Factories"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:28
+msgid "Search Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:29 template-types/cpt/cpt-log.php:29
+msgid "Not found"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:30 template-types/cpt/cpt-log.php:30
+msgid "Not found in Trash"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:31 template-types/cpt/cpt-log.php:31
+msgid "Featured Image"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:32 template-types/cpt/cpt-log.php:32
+msgid "Set featured image"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:33 template-types/cpt/cpt-log.php:33
+msgid "Remove featured image"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:34 template-types/cpt/cpt-log.php:34
+msgid "Use as featured image"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:35
+msgid "Insert into Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:36
+msgid "Uploaded to this Factory"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:37
+msgid "Factories list"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:38
+msgid "Factories list navigation"
+msgstr ""
+
+#: template-types/cpt/cpt-factory.php:39
+msgid "Filter Factories list"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:13
+msgctxt "Post Type General Name"
+msgid "Logs"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:14
+msgctxt "Post Type Singular Name"
+msgid "Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:15 template-types/cpt/cpt-log.php:42
+msgid "Logs"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:16
+msgid "Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:17
+msgid "Log Archives"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:18
+msgid "Log Attributes"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:19
+msgid "Parent Log:"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:20
+msgid "All Logs"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:21
+msgid "Add New Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:23
+msgid "New Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:24
+msgid "Edit Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:25
+msgid "Update Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:26
+msgid "View Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:27
+msgid "View Logs"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:28
+msgid "Search Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:35
+msgid "Insert into Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:36
+msgid "Uploaded to this Log"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:37
+msgid "Logs list"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:38
+msgid "Logs list navigation"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:39
+msgid "Filter Logs list"
+msgstr ""
+
+#: template-types/cpt/cpt-log.php:43
+msgid "Changelogs"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:13
+msgctxt "Taxonomy General Name"
+msgid "Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:14
+msgctxt "Taxonomy Singular Name"
+msgid "Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:15
+msgid "Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:16
+msgid "All Factory Tags"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:17
+msgid "Parent Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:18
+msgid "Parent Factory Tag:"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:19
+msgid "New Factory Tag Name"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:20
+msgid "Add New Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:21
+msgid "Edit Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:22
+msgid "Update Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:23
+msgid "View Factory Tag"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:24
+msgid "Separate Factory Tags with commas"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:25
+msgid "Add or remove Factory Tags"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:26
+#: template-types/tax/tax-post_experiments.php:26
+msgid "Choose from the most used"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:27
+msgid "Popular Factory Tags"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:28
+msgid "Search Factory Tags"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:29
+#: template-types/tax/tax-post_experiments.php:29
+msgid "Not Found"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:30
+msgid "No Factory Tags"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:31
+msgid "Factory Tags list"
+msgstr ""
+
+#: template-types/tax/tax-factory_tags.php:32
+msgid "Factory Tags list navigation"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:13
+msgctxt "Taxonomy General Name"
+msgid "Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:14
+msgctxt "Taxonomy Singular Name"
+msgid "Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:15
+msgid "Projects"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:16
+msgid "All Projects"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:17
+msgid "Parent Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:18
+msgid "Parent Project:"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:19
+msgid "New Project Name"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:20
+msgid "Add New Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:21
+msgid "Edit Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:22
+msgid "Update Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:23
+msgid "View Project"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:24
+msgid "Separate Projects with commas"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:25
+msgid "Add or remove Projects"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:27
+msgid "Popular Projects"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:28
+msgid "Search Projects"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:30
+msgid "No Projects"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:31
+msgid "Projects list"
+msgstr ""
+
+#: template-types/tax/tax-post_experiments.php:32
+msgid "Projects list navigation"
 msgstr ""
 
 #. Theme Name of the plugin/theme
-msgid "_s"
-msgstr ""
-
-#. Theme URI of the plugin/theme
-msgid "https://underscores.me/"
-msgstr ""
-
-#. Description of the plugin/theme
-msgid ""
-"Hi. I'm a starter theme called <code>_s</code>, or <em>underscores</em>, if "
-"you like. I'm a theme meant for hacking so don't use me as a <em>Parent "
-"Theme</em>. Instead try turning me into the next, most awesome, WordPress "
-"theme out there. That's what I'm here for."
-msgstr ""
-
-#. Author of the plugin/theme
-msgid "Automattic"
+msgid "SoaPatrickSeven"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://automattic.com/"
-msgstr ""
-
-#: comments.php:40
-#. translators: 1: comment count number, 2: title.
-msgctxt "comments title"
-msgid "%1$s thought on &ldquo;%2$s&rdquo;"
-msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
-msgstr[0] ""
-msgstr[1] ""
-
-#: inc/template-tags.php:29
-#. translators: %s: post date.
-msgctxt "post date"
-msgid "Posted on %s"
-msgstr ""
-
-#: inc/template-tags.php:35
-#. translators: %s: post author.
-msgctxt "post author"
-msgid "by %s"
-msgstr ""
-
-#: inc/template-tags.php:59
-#. translators: used between list items, there is a space after the comma
-msgctxt "list item separator"
-msgid ", "
+msgid "https://www.soapatrick.com"
 msgstr ""
