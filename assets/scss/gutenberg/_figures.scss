@@ -12,6 +12,7 @@ figure {
 
   figcaption {
     font-size: .8rem;
+    margin-top: $margin__base / 2;
     margin-bottom: 0;
     font-style: italic;
     color: inherit;
@@ -69,5 +70,6 @@ figure {
 .wp-block-video {
   video {
     display: block;
+    max-width: 100%;
   }
 }
