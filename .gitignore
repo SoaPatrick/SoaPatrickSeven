@@ -10,8 +10,8 @@ config.codekit3
 
 # localy generated files by running node
 package-lock.json
-node_modules/*
+node_modules/
 
 # Composer stuff
 composer.lock
-vendor/*
+vendor/

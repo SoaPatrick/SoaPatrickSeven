@@ -1,7 +1,9 @@
 .*
 .git/*
 .bitbucket/*
-scss/
+assets/scss/
 *.yml
 *.txt
 gulpfile.js
+composer.json
+package.json

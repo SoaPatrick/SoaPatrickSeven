@@ -1,7 +1,6 @@
 <?php
-
 /**
- * Template Name: Archives factory tag items
+ * The template for displaying factory tag items
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -51,7 +50,7 @@ get_header(); ?>
         <?php
           if ( have_posts() ) :
             while ( have_posts() ) : the_post();
-              get_template_part( 'template-parts/content', 'featured-full' );
+              get_template_part( 'template-partials/content/content', 'featured-full' );
             endwhile;
           endif;
         ?>
