@@ -42,7 +42,7 @@ function soapatrickseven_add_cpt_factory() {
 		'label'                 => __( 'Factory', 'soapatrickseven' ),
 		'description'           => __( 'Factories', 'soapatrickseven' ),
 		'labels'                => $labels,
-		'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions' ),
+		'supports'              => array( 'title', 'editor', 'excerpt', 'thumbnail', 'revisions' ),
 		'taxonomies'            => array( 'factory_tags' ),
 		'hierarchical'          => false,
 		'public'                => true,
