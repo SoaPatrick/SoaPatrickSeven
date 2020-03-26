@@ -8,7 +8,23 @@
 	height: 0;
 	overflow: hidden;
 	max-width: 100%;
-	background: #000;
+  background: var(--color__body);
+
+  img,
+  svg {
+    cursor: pointer;
+  }
+
+  .video--play-btn__bg {
+    transition: .4s opacity;
+    opacity: .7;
+  }
+
+  &:hover {
+    .video--play-btn__bg {
+      opacity: 1;
+    }
+  }
 
 	iframe,
 	object,
@@ -34,25 +50,22 @@
 		max-width: 100%;
 		width: 100%;
 		height: auto;
-		cursor: pointer;
-		transition: .4s all;
 	}
 
 	.video--play-btn {
 		position: absolute;
-		top: calc(50% - 1.25em);
+		top: calc(50% - 2em);
 		left: calc(50% - 2em);
 		width: 4em;
-		height: 2.5em;
-		margin: 0;
+		height: 4em;
+    margin: 0;
 
-		&:hover {
-			cursor: pointer;
+    &__bg {
+      fill: var(--color__highlight);
+    }
 
-			.video--play-btn__bg {
-				fill: #f00;
-        fill-opacity: 1;
-			}
+    &__play {
+      fill: $color__white;
     }
 
     &:focus {
