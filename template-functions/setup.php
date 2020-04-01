@@ -27,10 +27,14 @@ if ( ! function_exists( 'soapatrickseven_setup' ) ) :
     add_theme_support( 'editor-color-palette' );
     add_theme_support( 'disable-custom-colors' );
 
-    // This theme uses wp_nav_menu() in one location.
-    register_nav_menus( array(
-      'primary' => esc_html__( 'Primary', 'soapatrickseven' ),
-    ) );
+    // change default image sizes
+    update_option( 'thumbnail_size_w', 150 );
+    update_option( 'thumbnail_size_h', 150 );
+    update_option( 'thumbnail_crop', 1 );
+    update_option( 'medium_size_w', 750 );
+    update_option( 'medium_size_h', 0 );
+    update_option( 'large_size_w', 1500 );
+    update_option( 'large_size_h', 0 );
 
     // Switch default core markup for search form, comment form, and comments.
     add_theme_support( 'html5', array(
