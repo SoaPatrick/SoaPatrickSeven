@@ -19,7 +19,7 @@ body {
   color: var(--color__text);
   -webkit-font-smoothing: antialiased;
 
-	@media #{$breakpoint__768--min} {
+  @media #{$breakpoint__768--min} {
     margin: $margin__body calc(#{$navbar__width} + 5px);
   }
 }
