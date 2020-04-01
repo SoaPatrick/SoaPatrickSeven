@@ -5,7 +5,7 @@
  blockquote.wp-block-quote  {
   margin: $margin__base 0;
   padding: 0 $margin__base;
-  border-left: $blockquote__border-width solid var(--color__highlight);
+  border-left: $border-width__blockquote solid var(--color__highlight);
 
   p {
     font-weight: 400;

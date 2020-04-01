@@ -7,7 +7,7 @@
   gap: $margin__base;
   grid-template-columns: 1fr 1fr;
 
-  @media (max-width: 991px) {
+  @media #{$breakpoint__991--max} {
     display: block;
   }
 

@@ -34,7 +34,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media #{$breakpoint__767--max} {
   .site-header .logo {
     margin: 8vw auto 22vw auto;
   }

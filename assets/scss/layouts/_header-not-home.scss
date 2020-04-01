@@ -25,7 +25,7 @@
   }
 }
 
-@media (max-width: 768px) {
+@media #{$breakpoint__767--max} {
   .site-header--not-home {
     border-top: 1em solid var(--color__highlight);
 

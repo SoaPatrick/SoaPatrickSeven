@@ -55,8 +55,22 @@ $outline-highlight: $outline__width dotted $color__white;
 $navbar__width: 3rem;
 $navbar__height: 1.2 * $navbar__width;
 
-$btn__border-width: .125em;
-$blockquote__border-width: 5px;
+// Border-width
+$border-width__btn: .125em;
+$border-width__blockquote: 5px;
+
+// Breakpoints
+$breakpoint__370--max: (max-width: 370px);
+$breakpoint__371--min: (min-width: 371px);
+$breakpoint__767--max: (max-width: 767px);
+$breakpoint__768--min: (min-width: 768px);
+$breakpoint__991--max: (max-width: 991px);
+$breakpoint__992--min: (min-width: 992px);
+$breakpoint__1199--max: (max-width: 1199px);
+$breakpoint__1200--min: (min-width: 1200px);
+$breakpoint__1499--max: (max-width: 1499px);
+$breakpoint__1500--min: (min-width: 1500px);
+
 
 // CSS Variables
 :root {

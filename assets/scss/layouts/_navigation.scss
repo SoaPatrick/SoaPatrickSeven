@@ -84,7 +84,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media #{$breakpoint__767--max} {
   .site-navigation {
     top: auto;
     width: 100%;
@@ -107,7 +107,7 @@
 }
 
 // fix WP Admin Navbar margin
-@media (min-width: 768px) {
+@media #{$breakpoint__768--min} {
   body.admin-bar {
     .site-navigation {
       padding-top: calc(#{$margin__body} + 32px);
