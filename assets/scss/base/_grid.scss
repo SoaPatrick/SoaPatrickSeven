@@ -22,7 +22,7 @@
   }
 }
 
-@media (max-width: 767px){
+@media #{$breakpoint__767--max} {
   .grid {
     grid-template-columns: minmax($margin__base,5.5rem) 0 minmax(calc(320px - 2* #{$margin__base}),calc(100% - 2 * #{$margin__base})) 0 minmax($margin__base,5.5rem);
 

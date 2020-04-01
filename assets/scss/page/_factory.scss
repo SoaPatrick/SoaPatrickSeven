@@ -9,11 +9,11 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: $margin__base;
 
-    @media (max-width: 1199px) {
+    @media #{$breakpoint__1199--max} {
       grid-template-columns: 1fr 1fr;
     }
 
-    @media (max-width: 767px) {
+    @media #{$breakpoint__767--max} {
       grid-template-columns: 1fr;
     }
   }

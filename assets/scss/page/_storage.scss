@@ -10,18 +10,19 @@
     flex-grow: 0;
     flex-shrink: 0;
 
-    @media (max-width: 370px) {
+    @media #{$breakpoint__370--max}{
       width: calc(100%/2);
     }
 
-    @media (min-width: 371px) {
+    @media #{$breakpoint__371--min} {
       width: calc(100%/3);
     }
 
-    @media (min-width: 768px) {
+    @media #{$breakpoint__768--min} {
       width: calc(100%/4);
     }
-    @media (min-width: 1200px) {
+
+    @media #{$breakpoint__1200--min} {
       width: calc(100%/5);
     }
 

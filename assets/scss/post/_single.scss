@@ -6,7 +6,7 @@
   padding: 4rem 0;
 
   .inner-wrapper {
-    border-left: $blockquote__border-width solid var(--color__highlight);
+    border-left: $border-width__blockquote solid var(--color__highlight);
     margin: 0 0 1rem 0;
     padding-left: 2rem;
     position: relative;
@@ -19,7 +19,7 @@
       background: var(--color__wrapper);
       position: absolute;
       top: 0;
-      left: calc((1.25em / -2) - (#{$blockquote__border-width} / 2));
+      left: calc((1.25em / -2) - (#{$border-width__blockquote} / 2));
     }
 
     p {

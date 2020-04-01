@@ -20,13 +20,13 @@
         display: block;
       }
 
-      @media (min-width: 768px) {
+      @media #{$breakpoint__768--min} {
         grid-column-start: 2;
         grid-column-end: 5;
         grid-template-columns: repeat(4, 1fr);
       }
 
-      @media (max-width: 767px) {
+      @media #{$breakpoint__767--max} {
         grid-template-columns: 1fr 1fr;
       }
     }
