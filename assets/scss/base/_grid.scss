@@ -25,5 +25,13 @@
 @media (max-width: 767px){
   .grid {
     grid-template-columns: minmax($margin__base,5.5rem) 0 minmax(calc(320px - 2* #{$margin__base}),calc(100% - 2 * #{$margin__base})) 0 minmax($margin__base,5.5rem);
+
+    > .wp-block-embed-youtube,
+    > .wp-block-image,
+    > .wp-block-video,
+    > .wp-block-gallery {
+      grid-column-start: 1;
+      grid-column-end: 6;
+    }
   }
 }
