@@ -3,12 +3,12 @@
 --------------------------------------------------------------*/
 
 #settings {
-	position: fixed;
-	bottom: 4rem;
-	left: calc(50% - 4.6rem);
-	width: 9.2rem;
-	height: 14.5rem;
-	z-index: 3;
+  position: fixed;
+  bottom: 4rem;
+  left: calc(50% - 4.6rem);
+  width: 9.2rem;
+  height: 14.5rem;
+  z-index: 3;
   display: none;
 
   button,
@@ -18,8 +18,8 @@
     }
   }
 
-	&.open {
-		display: flex;
+  &.open {
+    display: flex;
   }
 
   &__header {
@@ -40,22 +40,22 @@
     cursor: pointer;
   }
 
-	.container {
-		position: relative;
-		background: var(--color__text);
-		color: var(--color__body);
-		box-shadow: $shadow__half;
-		padding: 2rem 1rem;
-	}
+  .container {
+    position: relative;
+    background: var(--color__text);
+    color: var(--color__body);
+    box-shadow: $shadow__half;
+    padding: 2rem 1rem;
+  }
 
-	.svg-inline--fa {
-		color: var(--color__body);
-	}
+  .svg-inline--fa {
+    color: var(--color__body);
+  }
 
-	h2 {
-		text-align: center;
-		margin-top: 0;
-	}
+  h2 {
+    text-align: center;
+    margin-top: 0;
+  }
 }
 
 /*
@@ -64,22 +64,22 @@
  */
 
 .theme-switch-wrapper {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-	.svg-inline--fa {
-		font-size: 1.3rem;
-	}
+  .svg-inline--fa {
+    font-size: 1.3rem;
+  }
 
-	.theme-switch {
-		display: inline-block;
-		height: 1.5rem;
-		position: relative;
-		width: 3rem;
-		margin: 0 .5rem;
+  .theme-switch {
+    display: inline-block;
+    height: 1.5rem;
+    position: relative;
+    width: 3rem;
+    margin: 0 .5rem;
 
-		input {
+    input {
       width: 100%;
       height: 100%;
       -webkit-appearance: none;
@@ -87,45 +87,45 @@
       border: 0;
       background: transparent;
 
-			&:checked + .slider {
-				background-color: #555;
+      &:checked + .slider {
+        background-color: #555;
 
-				&:before {
-					transform: translateX(1.5rem);
-				}
-			}
-		}
+        &:before {
+          transform: translateX(1.5rem);
+        }
+      }
+    }
 
-		.slider {
-			background-color: #222;
-			bottom: 0;
-			cursor: pointer;
-			left: 0;
-			position: absolute;
-			right: 0;
-			top: 0;
-			transition: .4s;
+    .slider {
+      background-color: #222;
+      bottom: 0;
+      cursor: pointer;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transition: .4s;
 
-			&:before {
-				background-color: $color__white;
-				content: "";
-				position: absolute;
-				bottom: .15rem;
-				left: .15rem;
-				height: 1.2rem;
-				width: 1.2rem;
-				transition: .4s;
-			}
+      &:before {
+        background-color: $color__white;
+        content: "";
+        position: absolute;
+        bottom: .15rem;
+        left: .15rem;
+        height: 1.2rem;
+        width: 1.2rem;
+        transition: .4s;
+      }
 
-			&.round {
-				border-radius: 1.5rem;
+      &.round {
+        border-radius: 1.5rem;
 
-				&:before {
-					border-radius: 50%;
-				}
-			}
-		}
-	}
+        &:before {
+          border-radius: 50%;
+        }
+      }
+    }
+  }
 }
 
 /*
@@ -134,36 +134,36 @@
  */
 
 #color-switch {
-	margin-top: 1.5rem;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  margin-top: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 
 
-	input {
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		display: inline-block;
-		position: relative;
-		margin: 0 0 .5rem 0;
-		padding: 0;
-		height: 2rem;
-		width: 2rem;
-		border: .2rem solid var(--color__text);
-		border-radius: 50%;
-		cursor: pointer;
-		outline: none;
+  input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    position: relative;
+    margin: 0 0 .5rem 0;
+    padding: 0;
+    height: 2rem;
+    width: 2rem;
+    border: .2rem solid var(--color__text);
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
 
-		&:checked {
-			border-color: var(--color__body);
-		}
-	}
+    &:checked {
+      border-color: var(--color__body);
+    }
+  }
 
-	@include color-switch(amber);
-	@include color-switch(red);
-	@include color-switch(pink);
-	@include color-switch(purple);
-	@include color-switch(blue);
-	@include color-switch(green);
+  @include color-switch(amber);
+  @include color-switch(red);
+  @include color-switch(pink);
+  @include color-switch(purple);
+  @include color-switch(blue);
+  @include color-switch(green);
 }

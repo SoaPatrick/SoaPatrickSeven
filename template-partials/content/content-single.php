@@ -15,25 +15,25 @@ $format = get_post_format();
 <article id="post-<?php the_ID(); ?>" <?php post_class('article post'); ?>>
   <?php if ($format === 'quote' || $format === 'link' || $format === 'status') : ?>
 
-		<header class="grid article__header">
-			<div class="inner-wrapper inner-wrapper__<?php echo $format ?>">
-				<?php
-					if($format === 'status') :
-			    	if (get_field( "font-awesome_icon" )) :
-					   	echo '<i class="' . get_field( "font-awesome_icon" ) . '"></i>';
-						else :
-							echo '<i class="fal fa-pencil"></i>';
-						endif;
-					endif;
-					the_content();
-		    ?>
-			</div>
-			<div class="article__meta">
+    <header class="grid article__header">
+      <div class="inner-wrapper inner-wrapper__<?php echo $format ?>">
+        <?php
+          if($format === 'status') :
+            if (get_field( "font-awesome_icon" )) :
+              echo '<i class="' . get_field( "font-awesome_icon" ) . '"></i>';
+            else :
+              echo '<i class="fal fa-pencil"></i>';
+            endif;
+          endif;
+          the_content();
+        ?>
+      </div>
+      <div class="article__meta">
         <?php
           soapatrickseven_posted_on();
           soapatrickseven_tags();
         ?>
-			</div>
+      </div>
     </header>
 
   <?php else : ?>

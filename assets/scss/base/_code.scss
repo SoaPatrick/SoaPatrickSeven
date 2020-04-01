@@ -12,18 +12,18 @@ code {
 }
 
 pre.prettyprint.wp-block-code  {
-	overflow-x: auto;
-	padding: 0;
-	border: 0;
-	background: var(--color__body);
-	border-radius: .2em;
+  overflow-x: auto;
+  padding: 0;
+  border: 0;
+  background: var(--color__body);
+  border-radius: .2em;
 
-	code {
+  code {
     background: transparent;
     padding: 1rem;
     display: block;
     line-height: initial;
-	}
+  }
 }
 
 pre .str, code .str { color: var(--color__code--green); } /* string  - green */

@@ -3,11 +3,11 @@
 --------------------------------------------------------------*/
 
 .storage {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 
-	&__year {
-		flex-grow: 0;
+  &__year {
+    flex-grow: 0;
     flex-shrink: 0;
 
     @media (max-width: 370px) {
@@ -25,11 +25,11 @@
       width: calc(100%/5);
     }
 
-		h2 {
-			margin-bottom: 0;
-		}
+    h2 {
+      margin-bottom: 0;
+    }
 
-		ul {
+    ul {
       margin-top: 0;
       list-style: none;
       padding: 0;
@@ -37,6 +37,6 @@
       li::before {
         content: none;
       }
-		}
-	}
+    }
+  }
 }

@@ -21,7 +21,7 @@
 
 
     <footer class="site-footer<?php if ( is_page() || is_paged() || is_archive() ) : ?> highlight<?php endif; ?>">
-			<p class="site-footer__copyright">
+      <p class="site-footer__copyright">
         <?php echo sprintf( __( 'Stuff from 2000 to %s by SoaPatrick/<a href="%s">Seven</a>', 'soapatrickseven' ), date('Y'), esc_url( home_url( '/log' )) ); ?>
       </p>
       <p class="site-footer__data-protection">
@@ -33,9 +33,9 @@
           </svg>
         </a>
       </p>
-	  </footer>
+    </footer>
 
-	</div>
+  </div>
 
 <?php wp_footer(); ?>
 
