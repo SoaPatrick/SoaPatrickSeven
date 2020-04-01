@@ -19,7 +19,7 @@
     </nav>
   </div>
 
-	<header class="grid article__header">
+  <header class="grid article__header">
     <?php the_title( '<h1 class="title-large">', '</h1>' ); ?>
 
     <div class="article__meta">
@@ -30,9 +30,9 @@
     </div>
   </header>
 
-	<div class="grid article__content">
-		<?php the_content(); ?>
-	</div>
+  <div class="grid article__content">
+    <?php the_content(); ?>
+  </div>
 
 
   <?php
