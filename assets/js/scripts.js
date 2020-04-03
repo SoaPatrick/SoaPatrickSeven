@@ -22,6 +22,18 @@ window.onload = function(){
     document.getElementById('settings').classList.remove('open');
     document.getElementById('toggle-settings').classList.remove('active');
   };
+
+  // Add language to all Code Blocks
+  var allCodeBlocks = document.querySelectorAll(".wp-block-code");
+  for (var i = 0; i < allCodeBlocks.length; i++) {
+    var singleCodeBlock = allCodeBlocks[i].children;
+    for (var j = 0; j < singleCodeBlock.length; j++) {
+      if (singleCodeBlock[j].hasAttribute("lang")) {
+        var codeLang = singleCodeBlock[j].getAttribute("lang");
+      }
+    }
+    allCodeBlocks[i].insertAdjacentHTML('afterbegin', '<div class="prism-language">'+ codeLang +'</div>');
+  }
 };
 
 

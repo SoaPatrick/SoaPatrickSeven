@@ -19,6 +19,22 @@ pre[class*="language-"] {
   margin: $margin__base 0;
   border-radius: .2em;
   background: $color__gray--darker;
+  position: relative;
+
+  .prism-titlename {
+    margin-top: 0 !important;
+    margin-bottom: 1rem;
+  }
+
+  .prism-language {
+    position: absolute;
+    right: .25rem;
+    top: .25rem;
+    font-size: .5rem;
+    font-weight: bold;
+    color: orange;
+    font-family: $font-family__code;
+  }
 }
 
 code[class*="language-"],
