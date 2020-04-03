@@ -1,39 +1,27 @@
 /*----------------------------------------------
 #Code
 ----------------------------------------------*/
-
-code {
-	background: var(--color__body);
-  padding: .3em;
-  display: inline-block;
-  line-height: 1;
-  border-radius: .2em;
-  font-size: $font-size__small;
-}
-
-pre.prettyprint.wp-block-code  {
-  overflow-x: auto;
-  padding: 0;
-  border: 0;
-  background: var(--color__body);
-  border-radius: .2em;
-
+p,
+ul,
+ol {
   code {
-    background: transparent;
-    padding: 1rem;
-    display: block;
-    line-height: initial;
+    background: var(--color__body);
+    padding: .3em;
+    display: inline-block;
+    line-height: 1;
+    border-radius: .2em;
+    font-size: $font-size__small;
+    font-family: $font-family__code;
   }
 }
 
-pre .str, code .str { color: var(--color__code--green); } /* string  - green */
-pre .kwd, code .kwd { color: var(--color__code--blue); } /* keyword - dark pink */
-pre .com, code .com { color: var(--color__code--gray); font-style: italic; } /* comment - gray */
-pre .typ, code .typ { color: var(--color__code--red); } /* type - light blue */
-pre .lit, code .lit { color: var(--color__code--purple); } /* literal - blue */
-pre .pun, code .pun { color: var(--color__code--color); } /* punctuation - white */
-pre .pln, code .pln { color: var(--color__code--color); } /* plaintext - white */
-pre .tag, code .tag { color: var(--color__code--red); } /* html/xml tag    - light blue */
-pre .atn, code .atn { color: var(--color__code--purple); } /* html/xml attribute name  - khaki */
-pre .atv, code .atv { color: var(--color__code--green); } /* html/xml attribute value - green */
-pre .dec, code .dec { color: var(--color__code--purple); } /* decimal - blue */
+pre[class*="language-"] {
+  margin: $margin__base 0;
+  border-radius: .2em;
+  background: $color__gray--darker;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  font-size: $font-size__code;
+}

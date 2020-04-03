@@ -18,6 +18,7 @@ $color__gray--light: #eeeeee;
 // Font-Family
 $font-family__base: 'Source Sans Pro', serif;
 $font-family__heading: 'AmsiProNarw-Black', sans-serif;
+$font-family__code: Hack, "Fira Code", Consolas, Menlo, Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
 
 // Font-Sizes
 $font-size__base: calc(18px + .25vw);
@@ -26,6 +27,7 @@ $font-size__h2: 1.5rem;
 $font-size__h3: 1.2rem;
 $font-size__h4: 1rem;
 $font-size__small: 0.8rem;
+$font-size__code: 0.65rem;
 $font-size__medium: calc(22px + 1.5vw);
 $font-size__large: calc(26px + 1.6vw);
 
