@@ -20,10 +20,11 @@ pre[class*="language-"] {
   border-radius: .2em;
   background: $color__gray--darker;
   position: relative;
+  padding: 0;
 
   .prism-titlename {
-    margin-top: 0 !important;
-    margin-bottom: 1rem;
+    margin: 0 !important;
+    padding: $margin__base $margin__base 0;
   }
 
   .prism-language {
@@ -35,9 +36,30 @@ pre[class*="language-"] {
     color: orange;
     font-family: $font-family__code;
   }
+
+  code {
+    overflow-y: auto;
+    display: block;
+    padding: $margin__base;
+  }
+
+  &.line-numbers code {
+    padding-left: 3rem;
+
+    .line-numbers-rows {
+      padding: $margin__base 0;
+      left: 0;
+    }
+  }
 }
 
 code[class*="language-"],
 pre[class*="language-"] {
   font-size: $font-size__code;
+
+  &::selection,
+  ::selection {
+    background: var(--color__highlight);
+    color: $color__white;
+  }
 }
