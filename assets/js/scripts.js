@@ -1,7 +1,7 @@
 window.onload = function(){
 
-	// open/close search
-	document.getElementById('toggle-search-collapse').onclick = function() {
+  // open/close search
+  document.getElementById('toggle-search-collapse').onclick = function() {
     document.getElementById('search-collapse').classList.toggle('open');
     document.getElementById('toggle-search-collapse').classList.toggle('active');
     document.getElementById('bubbles-animated').classList.toggle('hidden');
@@ -10,19 +10,18 @@ window.onload = function(){
     document.getElementById('search-collapse--input').value = "";
   };
 
-
-	// toggle Settings from Navigation
-	document.getElementById('toggle-settings').onclick = function() {
+  // toggle Settings from Navigation
+  document.getElementById('toggle-settings').onclick = function() {
     document.getElementById('settings').classList.toggle('open');
     document.getElementById('toggle-settings').classList.toggle('active');
     document.getElementById("light-dark-switch").focus();
-	};
+  };
 
-	// Close Settings
-	document.getElementById('settings__close').onclick = function() {
+  // Close Settings
+  document.getElementById('settings__close').onclick = function() {
     document.getElementById('settings').classList.remove('open');
     document.getElementById('toggle-settings').classList.remove('active');
-	};
+  };
 };
 
 
@@ -31,21 +30,21 @@ window.onload = function(){
 // ----------------------------------------
 document.addEventListener("DOMContentLoaded",function() {
   var div, n,
-      v = document.getElementsByClassName("youtube-wrapper__video");
+    v = document.getElementsByClassName("youtube-wrapper__video");
   for (n = 0; n < v.length; n++) {
-      div = document.createElement("div");
-      div.setAttribute("data-id", v[n].dataset.id);
-      div.innerHTML = ytThumb(v[n].dataset.id);
-      div.onclick = ytIframe;
-      v[n].appendChild(div);
+    div = document.createElement("div");
+    div.setAttribute("data-id", v[n].dataset.id);
+    div.innerHTML = ytThumb(v[n].dataset.id);
+    div.onclick = ytIframe;
+    v[n].appendChild(div);
   }
 });
 
 function ytThumb(id) {
-var thumbRes = (document.body.clientWidth > 640) ? 'maxresdefault.jpg' : 'hqdefault.jpg',
+  var thumbRes = (document.body.clientWidth > 640) ? 'maxresdefault.jpg' : 'hqdefault.jpg',
   thumbImg = '<img src="https://i.ytimg.com/vi/ID/'+thumbRes+'" alt="Youtube Thumbnail">',
-  thumbBut = '<button type="button" class="video--play-btn" aria-label="Play Video"><svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%"><path class="video--play-btn__bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#212121" fill-opacity="0.8"></path><path d="M 45,24 27,14 27,34" fill="#fff"></path></svg></button>';
-return thumbImg.replace("ID", id) + thumbBut;
+  thumbBut = '<button type="button" class="video--play-btn" aria-label="Play Video"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><circle class="video--play-btn__bg" cx="256" cy="256" r="256"/><path class="video--play-btn__play" d="M371.91,244.63,198.36,144.43a13.69,13.69,0,0,0-20.54,11.86v200.4a13.69,13.69,0,0,0,20.54,11.86l173.55-100.2A13.69,13.69,0,0,0,371.91,244.63Z"/></svg></button>';
+  return thumbImg.replace("ID", id) + thumbBut;
 }
 
 
@@ -57,7 +56,6 @@ function ytIframe() {
   iframe.setAttribute("mute", "1");
   iframe.setAttribute("allow", "accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture");
   this.parentNode.replaceChild(iframe, this);
-
 }
 
 
@@ -95,14 +93,14 @@ const toggleColorSwitch = document.getElementById("color-switch");
 toggleColorSwitch.addEventListener('click', switchColor, false);
 
 function switchColor(e) {
-	document.documentElement.setAttribute('data-color', e.target.value);
-	localStorage.setItem('color', e.target.value);
+  document.documentElement.setAttribute('data-color', e.target.value);
+  localStorage.setItem('color', e.target.value);
 }
 
 // currentColor variable set in head
 if (currentColor) {
-    document.documentElement.setAttribute('data-color', currentColor);
-    document.getElementById('switch--'+currentColor).checked = true;
+  document.documentElement.setAttribute('data-color', currentColor);
+  document.getElementById('switch--'+currentColor).checked = true;
 }
 
 
@@ -111,42 +109,42 @@ if (currentColor) {
 dragElement(document.getElementById("settings"));
 
 function dragElement(elmnt) {
-	var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
-	if (document.getElementById(elmnt.id + "__header")) {
-		// if present, the header is where you move the DIV from
-		document.getElementById(elmnt.id + "__header").onmousedown = dragMouseDown;
-	} else {
-		// otherwise, move the DIV from anywhere inside the DIV
-		elmnt.onmousedown = dragMouseDown;
-	}
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "__header")) {
+    // if present, the header is where you move the DIV from
+    document.getElementById(elmnt.id + "__header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV
+    elmnt.onmousedown = dragMouseDown;
+  }
 
-	function dragMouseDown(e) {
-		e = e || window.event;
-		e.preventDefault();
-		// get the mouse cursor position at startup
-		pos3 = e.clientX;
-		pos4 = e.clientY;
-		document.onmouseup = closeDragElement;
-		// call a function whenever the cursor moves
-		document.onmousemove = elementDrag;
-	}
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves
+    document.onmousemove = elementDrag;
+  }
 
-	function elementDrag(e) {
-		e = e || window.event;
-		e.preventDefault();
-		// calculate the new cursor position
-		pos1 = pos3 - e.clientX;
-		pos2 = pos4 - e.clientY;
-		pos3 = e.clientX;
-		pos4 = e.clientY;
-		// set the element's new position
-		elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-		elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-	}
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
 
-	function closeDragElement() {
-		// stop moving when mouse button is released
-		document.onmouseup = null;
-		document.onmousemove = null;
-	}
+  function closeDragElement() {
+    // stop moving when mouse button is released
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
 }

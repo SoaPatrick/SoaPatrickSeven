@@ -14,9 +14,9 @@
 <!doctype html>
 <html <?php language_attributes(); ?> data-color="pink" data-theme="dark">
 <head>
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+  <meta charset="<?php bloginfo( 'charset' ); ?>">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="profile" href="https://gmpg.org/xfn/11">
   <?php
     wp_head();
     get_template_part( 'template-partials/head/fontlicense');
@@ -34,7 +34,7 @@
     get_template_part( 'template-partials/layout/navigation');
   ?>
 
-	<div class="site-wrapper">
+  <div class="site-wrapper">
     <?php
       if ( is_home() && !is_paged() ) :
         get_template_part( 'template-partials/layout/header', 'home');
@@ -42,5 +42,5 @@
         get_template_part( 'template-partials/layout/header', 'not_home');
       endif;
     ?>
-	  <div class="site-content">
+    <div class="site-content">
 

@@ -34,10 +34,10 @@
   }
 }
 
-@media (max-width: 768px) {
-	.site-header .logo {
-		margin: 8vw auto 22vw auto;
-	}
+@media #{$breakpoint__767--max} {
+  .site-header .logo {
+    margin: 8vw auto 22vw auto;
+  }
 }
 
 /*

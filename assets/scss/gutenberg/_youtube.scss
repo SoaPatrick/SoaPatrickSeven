@@ -3,62 +3,75 @@
 --------------------------------------------------------------*/
 
 .youtube-wrapper__video {
-	position: relative;
-	padding-bottom: 56.23%;
-	height: 0;
-	overflow: hidden;
-	max-width: 100%;
-	background: #000;
+  position: relative;
+  padding-bottom: 56.23%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: var(--color__body);
 
-	iframe,
-	object,
-	embed {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
-		z-index: 100;
-		background: transparent;
-	}
+  img,
+  svg {
+    cursor: pointer;
+  }
 
-	img {
-		display: block;
-		position: absolute;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-		margin: auto;
-		border: none;
-		max-width: 100%;
-		width: 100%;
-		height: auto;
-		cursor: pointer;
-		transition: .4s all;
-	}
+  .video--play-btn__bg {
+    transition: .4s opacity;
+    opacity: .7;
+  }
 
-	.video--play-btn {
-		position: absolute;
-		top: calc(50% - 1.25em);
-		left: calc(50% - 2em);
-		width: 4em;
-		height: 2.5em;
-		margin: 0;
+  &:hover {
+    .video--play-btn__bg {
+      opacity: 1;
+    }
+  }
 
-		&:hover {
-			cursor: pointer;
+  iframe,
+  object,
+  embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    background: transparent;
+  }
 
-			.video--play-btn__bg {
-				fill: #f00;
-        fill-opacity: 1;
-			}
+  img {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    border: none;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+  }
+
+  .video--play-btn {
+    position: absolute;
+    top: calc(50% - 2em);
+    left: calc(50% - 2em);
+    width: 4em;
+    height: 4em;
+    margin: 0;
+
+    &__bg {
+      fill: var(--color__highlight);
+    }
+
+    &__play {
+      fill: $color__white;
     }
 
     &:focus {
       outline: $outline;
     }
-	}
+  }
 }
 
 

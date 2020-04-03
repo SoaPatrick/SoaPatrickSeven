@@ -18,6 +18,7 @@ $color__gray--light: #eeeeee;
 // Font-Family
 $font-family__base: 'Source Sans Pro', serif;
 $font-family__heading: 'AmsiProNarw-Black', sans-serif;
+$font-family__code: Hack, "Fira Code", Consolas, Menlo, Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
 
 // Font-Sizes
 $font-size__base: calc(18px + .25vw);
@@ -26,6 +27,7 @@ $font-size__h2: 1.5rem;
 $font-size__h3: 1.2rem;
 $font-size__h4: 1rem;
 $font-size__small: 0.8rem;
+$font-size__code: 0.65rem;
 $font-size__medium: calc(22px + 1.5vw);
 $font-size__large: calc(26px + 1.6vw);
 
@@ -55,17 +57,31 @@ $outline-highlight: $outline__width dotted $color__white;
 $navbar__width: 3rem;
 $navbar__height: 1.2 * $navbar__width;
 
-$btn__border-width: .125em;
-$blockquote__border-width: 5px;
+// Border-width
+$border-width__btn: .125em;
+$border-width__blockquote: 5px;
+
+// Breakpoints
+$breakpoint__370--max: (max-width: 370px);
+$breakpoint__371--min: (min-width: 371px);
+$breakpoint__767--max: (max-width: 767px);
+$breakpoint__768--min: (min-width: 768px);
+$breakpoint__991--max: (max-width: 991px);
+$breakpoint__992--min: (min-width: 992px);
+$breakpoint__1199--max: (max-width: 1199px);
+$breakpoint__1200--min: (min-width: 1200px);
+$breakpoint__1499--max: (max-width: 1499px);
+$breakpoint__1500--min: (min-width: 1500px);
+
 
 // CSS Variables
 :root {
-	--amber: #FFB300;
-	--red: #CF3A3A;
-	--pink: #EC407A;
-	--purple: #AB47BC;
-	--blue: #28aae2;
-	--green: #348236;
+  --amber: #FFB300;
+  --red: #CF3A3A;
+  --pink: #EC407A;
+  --purple: #AB47BC;
+  --blue: #28aae2;
+  --green: #348236;
 
   --color__highlight: var(--pink);
 }

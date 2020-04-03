@@ -10,7 +10,7 @@
     max-width: 1440px;
     margin: 0 auto;
 
-    @media (min-width: 1500px) {
+    @media #{$breakpoint__1500--min} {
       max-width: calc(1500px + 20vw);
     }
   }

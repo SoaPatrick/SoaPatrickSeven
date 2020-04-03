@@ -10,28 +10,28 @@
 ?>
 
 <section class="factory-feed highlight">
-	<div class="grid">
-		<h1 class="title-large text-center"><i class="fal fa-industry-alt fa-fw"></i><?php esc_html_e( 'Factory Feed', 'soapatrickseven' ); ?></h1>
-		<div class="factory-feed__items">
-			<?php
-				$args = array(
+  <div class="grid">
+    <h1 class="title-large text-center"><i class="fal fa-industry-alt fa-fw"></i><?php esc_html_e( 'Factory Feed', 'soapatrickseven' ); ?></h1>
+    <div class="factory-feed__items">
+      <?php
+        $args = array(
           'post_type'       => 'factory',
           'post_status'     => 'publish',
           'posts_per_page'  => '4'
         );
-				$factory = new WP_Query( $args );
-				if( $factory->have_posts() ) :
+        $factory = new WP_Query( $args );
+        if( $factory->have_posts() ) :
           while( $factory->have_posts() ) : $factory->the_post();
             ?>
               <a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>" aria-label="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
             <?php
           endwhile;
-				  wp_reset_postdata();
-				endif;
-			?>
+          wp_reset_postdata();
+        endif;
+      ?>
     </div>
-		<p class="lead">
+    <p class="lead">
       <?php echo sprintf( __( 'The rest can be seen <a href="%s">in the Factory</a>.', 'soapatrickseven' ), esc_url( home_url( '/factory' ) )); ?>
     </p>
-	</div>
+  </div>
 </section>

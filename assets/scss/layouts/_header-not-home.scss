@@ -3,13 +3,13 @@
 --------------------------------------------------------------*/
 
 .site-header--not-home {
-	position: absolute;
+  position: absolute;
   width: 100%;
   z-index: -1;
 
   .bubbles-row {
-		position: relative;
-		fill: var(--color__highlight);
+    position: relative;
+    fill: var(--color__highlight);
 
     &__third {
       opacity: .3;
@@ -20,21 +20,21 @@
     }
   }
 
-	+ .site-content {
-		padding-top: calc(14vw + 2em);
-	}
+  + .site-content {
+    padding-top: calc(14vw + 2em);
+  }
 }
 
-@media (max-width: 768px) {
-	.site-header--not-home {
-		border-top: 1em solid var(--color__highlight);
+@media #{$breakpoint__767--max} {
+  .site-header--not-home {
+    border-top: 1em solid var(--color__highlight);
 
-		.bubbles-row {
-			margin-top: -1px;
-		}
+    .bubbles-row {
+      margin-top: -1px;
+    }
 
-		+ .site-content {
-			padding-top: calc(14vw + 3em);
-		}
-	}
+    + .site-content {
+      padding-top: calc(14vw + 3em);
+    }
+  }
 }
