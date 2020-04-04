@@ -252,7 +252,7 @@ add_action('wp_head', 'soapatrickseven_add_opengraph_doctype', 1);
 function soapatrickseven_add_opengraph_infos() {
 
   global $post;
-  $default_image = get_template_directory_uri().'/favicon/android-chrome-512x512.png';
+  $default_image = get_template_directory_uri().'/assets/favicon/android-chrome-512x512.png';
 
   // if page is not single
   if ( !is_singular() ) {
