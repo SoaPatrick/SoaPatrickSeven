@@ -21,7 +21,6 @@
     wp_head();
     get_template_part( 'template-partials/head/fontlicense');
     get_template_part( 'template-partials/head/favicon');
-    get_template_part( 'template-partials/head/fontawesome');
     get_template_part( 'template-partials/head/theme-script');
   ?>
 </head>
