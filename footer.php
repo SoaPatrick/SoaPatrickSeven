@@ -37,7 +37,10 @@
 
   </div>
 
-<?php wp_footer(); ?>
+<?php
+  get_template_part( 'template-partials/foot/fontawesome');
+  wp_footer();
+?>
 
 </body>
 </html>
