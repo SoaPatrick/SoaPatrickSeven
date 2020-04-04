@@ -65,3 +65,18 @@ body {
 body.single .site-content {
   padding-bottom: 0;
 }
+
+// scollbar
+::-webkit-scrollbar {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color__highlight);
+}

@@ -160,10 +160,10 @@
     }
   }
 
-  @include color-switch(amber);
-  @include color-switch(red);
-  @include color-switch(pink);
-  @include color-switch(purple);
-  @include color-switch(blue);
-  @include color-switch(green);
+  @include color-switch(amber,$color--amber);
+  @include color-switch(red,$color--red);
+  @include color-switch(pink,$color--pink);
+  @include color-switch(purple,$color--purple);
+  @include color-switch(blue,$color--blue);
+  @include color-switch(green,$color--green);
 }
