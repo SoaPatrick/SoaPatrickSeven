@@ -1,0 +1,19 @@
+/*--------------------------------------------------------------
+#Animations
+--------------------------------------------------------------*/
+
+// Bob
+@keyframes bob {
+  0% { transform: translateY(-1rem); box-shadow: 0 1rem 1rem rgba($color__black,.5);}
+  50% { transform: translateY(-.8rem); box-shadow: 0 .8rem .8rem rgba($color__black,.5);}
+  100% { transform: translateY(-1rem); box-shadow: 0 1rem 1rem rgba($color__black,.5);}
+}
+
+@keyframes bob-float {
+  100% { transform: translateY(-1rem); box-shadow: 0 1rem 1rem rgba($color__black,.5);}
+}
+
+@keyframes bob-start {
+  0% { transform: translateY(-.75rem); box-shadow: 0 .75rem .75rem rgba($color__black,.5);}
+  100% { transform: translateY(0); box-shadow: none;}
+}
