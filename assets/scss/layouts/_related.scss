@@ -14,6 +14,8 @@
       display: grid;
       gap: 1rem;
 
+      @include bob-animation();
+
       img {
         max-width: 100%;
         height: auto;

@@ -16,3 +16,26 @@
   opacity: $opacity;
   animation: moveclouds $moveclouds linear $delay infinite,sideWays $sideways ease-in-out infinite alternate;
 }
+
+@mixin bob-animation() {
+  a img {
+    display: inline-block;
+    vertical-align: middle;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    animation-name: bob-start;
+    animation-duration: .3s;
+  }
+
+  a:hover img,
+  a:focus img,
+  a:active img {
+    animation-name: bob-float, bob;
+    animation-duration: .3s, 1.5s;
+    animation-delay: 0s, .3s;
+    animation-timing-function: ease-out, ease-in-out;
+    animation-iteration-count: 1, infinite;
+    animation-fill-mode: forwards;
+    animation-direction: normal, alternate;
+  }
+}

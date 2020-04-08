@@ -20,6 +20,8 @@
     display: grid;
     gap: $margin__base;
 
+    @include bob-animation();
+
     img {
       max-width: 100%;
       height: auto;
