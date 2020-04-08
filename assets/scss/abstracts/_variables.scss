@@ -16,12 +16,12 @@ $color__gray--darker: #1c1c1c;
 $color__gray--light: #eeeeee;
 
 // Theme Colors
-$color--amber: #FFB300;
-$color--red: #CF3A3A;
-$color--pink: #EC407A;
-$color--purple: #AB47BC;
-$color--blue: #28aae2;
-$color--green: #348236;
+$color__amber: #FFB300;
+$color__red: #CF3A3A;
+$color__pink: #EC407A;
+$color__purple: #AB47BC;
+$color__blue: #28aae2;
+$color__green: #348236;
 
 // Font-Family
 $font-family__base: 'Source Sans Pro', serif;
@@ -35,7 +35,7 @@ $font-size__h2: 1.5rem;
 $font-size__h3: 1.2rem;
 $font-size__h4: 1rem;
 $font-size__small: 0.8rem;
-$font-size__code: 0.65rem;
+$font-size__smaller: 0.65rem;
 $font-size__medium: calc(22px + 1.5vw);
 $font-size__large: calc(26px + 1.6vw);
 
@@ -83,36 +83,24 @@ $breakpoint__1500--min: (min-width: 1500px);
 
 // CSS Variables
 :root {
-  --color__highlight: #{$color--pink};
+  --color__highlight: #{$color__pink};
 }
 
 [data-theme="dark"] {
   --color__body: #{$color__gray--darker};
   --color__wrapper: #{$color__gray--dark};
   --color__text: #{$color__white};
-
-  --color__code--green: rgb(180,213,131);
-  --color__code--blue: rgb(129,207,238);
-  --color__code--red: rgb(240,113,120);
-  --color__code--purple: rgb(199,146,234);
-  --color__code--gray: #999;
 }
 
 [data-theme="light"] {
 	--color__body: #{$color__gray--light};
 	--color__wrapper: #{$color__white};
   --color__text: #{$color__gray--dark};
-
-  --color__code--green: rgb(145,184,89);
-  --color__code--blue: rgb(57,173,181);
-  --color__code--red: rgb(255,83,112);
-  --color__code--purple: rgb(124,77,255);
-  --color__code--gray: #aeaeae;
 }
 
-[data-color="amber"] { --color__highlight: #{$color--amber} }
-[data-color="red"] { --color__highlight: #{$color--red} }
-[data-color="pink"] { --color__highlight: #{$color--pink} }
-[data-color="purple"] { --color__highlight: #{$color--purple} }
-[data-color="blue"] { --color__highlight: #{$color--blue} }
-[data-color="green"] { --color__highlight: #{$color--green} }
+[data-color="amber"] { --color__highlight: #{$color__amber} }
+[data-color="red"] { --color__highlight: #{$color__red} }
+[data-color="pink"] { --color__highlight: #{$color__pink} }
+[data-color="purple"] { --color__highlight: #{$color__purple} }
+[data-color="blue"] { --color__highlight: #{$color__blue} }
+[data-color="green"] { --color__highlight: #{$color__green} }

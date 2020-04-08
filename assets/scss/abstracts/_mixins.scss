@@ -17,8 +17,13 @@
   animation: moveclouds $moveclouds linear $delay infinite,sideWays $sideways ease-in-out infinite alternate;
 }
 
-@mixin bob-animation() {
-  a img {
+@mixin bob-animation($tag) {
+  #{$tag} {
+    animation-name: hide-start;
+    animation-duration: .5s;
+  }
+
+  #{$tag} img {
     display: inline-block;
     vertical-align: middle;
     transform: translateZ(0);
@@ -27,9 +32,9 @@
     animation-duration: .3s;
   }
 
-  a:hover img,
-  a:focus img,
-  a:active img {
+  #{$tag}:hover img,
+  #{$tag}:focus img,
+  #{$tag}:active img {
     animation-name: bob-float, bob;
     animation-duration: .3s, 1.5s;
     animation-delay: 0s, .3s;
@@ -38,4 +43,17 @@
     animation-fill-mode: forwards;
     animation-direction: normal, alternate;
   }
+
+
+
+  // #{$tag} img {
+  //   transition: all .3s;
+  // }
+
+  // #{$tag}:hover img,
+  // #{$tag}:focus img,
+  // #{$tag}:active img {
+  //   transform: translateY(-1rem);
+  //   box-shadow: 0 1rem 1rem rgba($color__black,.5);
+  // }
 }
