@@ -3,11 +3,18 @@
 --------------------------------------------------------------*/
 
 .factory-feed {
+  @include bob-animation(article);
+  color: $color__white;
+
   margin: 2rem 0;
   padding: 4rem 0;
 
   .svg-inline--fa {
     color: inherit;
+  }
+
+  h1 {
+    margin-bottom: 2rem;
   }
 
   .lead {
@@ -16,26 +23,38 @@
   }
 
   &__items {
-    margin-top: 2rem;
     display: grid;
     gap: $margin__base;
 
-    @include bob-animation();
-
-    img {
-      max-width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    @media #{$breakpoint__768--min} {
+    @media #{$breakpoint__1200--min} {
       grid-column-start: 2;
       grid-column-end: 5;
       grid-template-columns: repeat(4,1fr);
     }
 
-    @media #{$breakpoint__767--max} {
+    @media #{$breakpoint__1199--max} {
       grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  article {
+    position: relative;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      position: absolute;
+      bottom: 0;
+      margin: 0;
+      font-family: $font-family__base;
+      font-weight: $font-weight__bold;
+      font-size: $font-size__smaller;
     }
   }
 }
