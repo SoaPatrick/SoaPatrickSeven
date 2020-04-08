@@ -39,8 +39,10 @@
     $term = get_field('project');
     if( $term ):
       $args = array(
-      'post_type'   => 'post',
-      'tax_query'   => array(
+      'post_type'         => 'post',
+      'posts_per_page'    => 20,
+      'order'             => 'ASC',
+      'tax_query'         => array(
           array(
           'taxonomy'  => 'projects',
           'field'     => 'term_id',
