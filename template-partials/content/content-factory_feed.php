@@ -22,9 +22,7 @@
         $factory = new WP_Query( $args );
         if( $factory->have_posts() ) :
           while( $factory->have_posts() ) : $factory->the_post();
-            ?>
-              <a href="<?php the_permalink(); ?>" alt="<?php the_title(); ?>" aria-label="<?php the_title(); ?>"><?php the_post_thumbnail(); ?></a>
-            <?php
+            get_template_part( 'template-partials/content/content', 'featured-full' );
           endwhile;
           wp_reset_postdata();
         endif;

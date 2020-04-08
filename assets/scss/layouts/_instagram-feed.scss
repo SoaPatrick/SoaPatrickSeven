@@ -45,6 +45,8 @@
     transition: opacity .5s ease-in-out;
     opacity: .3 ;
 
+    @include bob-animation(a);
+
     a {
       display: block;
       background-size: cover;
@@ -55,8 +57,6 @@
     &.is-selected {
       opacity: 1;
     }
-
-    @include bob-animation();
 
     img {
       width: 100%;

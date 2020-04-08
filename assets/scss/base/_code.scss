@@ -55,7 +55,7 @@ pre[class*="language-"] {
 
 code[class*="language-"],
 pre[class*="language-"] {
-  font-size: $font-size__code;
+  font-size: $font-size__smaller;
 
   &::selection,
   ::selection {
