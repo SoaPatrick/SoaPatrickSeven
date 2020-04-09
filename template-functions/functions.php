@@ -65,6 +65,17 @@ endif;
 
 
 /**
+ * Edit link for blog posts and factory items
+ *
+ */
+if ( ! function_exists( 'soapatrickseven_edit_post' ) ) :
+  function soapatrickseven_edit_post() {
+    edit_post_link( __( 'Edit', 'soapatrickseven' ), '<div class="edit"><i class="fal fa-edit"></i>', '</div>' );
+  }
+endif;
+
+
+/**
  * function for single post navigation
  *
  */

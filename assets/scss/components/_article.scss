@@ -9,9 +9,20 @@
     display: flex;
     flex-wrap: wrap;
 
-    .posted-on {
+    .posted-on,
+    .tags {
       margin-right: 1.5em;
       margin-bottom: .5em;
+    }
+
+    @media #{$breakpoint__991--max} {
+      .tags {
+        margin: 0;
+      }
+
+      .edit {
+        display: none;
+      }
     }
 
     svg {
