@@ -8,6 +8,10 @@
   grid-template-areas: "previous next";
   gap: 2rem;
 
+  &--single {
+    margin-bottom: 4rem;
+  }
+
   @media #{$breakpoint__767--max} {
     grid-template-columns: 1fr;
     grid-template-areas: "next" "previous";
