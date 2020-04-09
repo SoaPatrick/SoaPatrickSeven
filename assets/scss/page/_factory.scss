@@ -8,6 +8,7 @@
 
   &__list {
     margin: $margin__base 0;
+    padding-bottom: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: $margin__base;
