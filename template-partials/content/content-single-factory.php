@@ -26,6 +26,7 @@
       <?php
         soapatrickseven_posted_on();
         soapatrickseven_tags();
+        soapatrickseven_edit_post();
       ?>
     </div>
   </header>
