@@ -15,7 +15,7 @@ get_header(); ?>
       <hr>
     </header>
     <div class="grid">
-      <div class="changelog">
+      <div class="changelog" data-infinite-scroll='{ "path": ".post-navigation__previous", "append": ".logs", "history": false, "scrollThreshold": false, "button" : ".post-navigation__previous" }'>
         <?php
           if( have_posts() ) :
             $day_check = '';
@@ -24,9 +24,9 @@ get_header(); ?>
               $day = get_the_date('j');
               if ($day != $day_check) {
                 if ($day_check != '') {
-                  echo '</ul>';
+                  echo '</ul></div>';
                 }
-                echo '<h2>' . get_the_date() . '</h2><ul>';
+                echo '<div class="logs"><h2>' . get_the_date() . '</h2><ul>';
               }
               $field = get_field_object('changelog_type');
               $value = $field['value'];

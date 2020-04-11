@@ -103,7 +103,7 @@ if ( ! function_exists( 'soapatrickseven_posts_navigation' ) ) :
       posts_nav_link( ' ', __( 'Next Items', 'soapatrickseven' ), __( 'Previous Items', 'soapatrickseven' ) );
     }
     if ( 'log' === get_post_type() ) {
-      posts_nav_link( ' ', __( 'Next Logs', 'soapatrickseven' ), __( 'Previous Logs', 'soapatrickseven' ) );
+      next_posts_link( __( 'Load More', 'soapatrickseven' ) );
     }
     echo '</nav></div>';
 	}
