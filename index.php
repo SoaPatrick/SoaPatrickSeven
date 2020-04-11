@@ -31,6 +31,10 @@ get_header();
 
     if (is_single()):
 
+      if ( 'post' === get_post_type() ) {
+        soapatrickseven_post_navigation();
+      }
+
       get_template_part( 'template-partials/content/content-related', get_post_type() );
 
     else:
