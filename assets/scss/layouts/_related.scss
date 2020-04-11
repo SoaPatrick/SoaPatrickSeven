@@ -10,8 +10,10 @@
   }
 
   &--factory{
-    @include bob-animation(article);
     color: $color__white;
+
+    @include bob-animation-font-size();
+    @include bob-animation(article);
 
     &__items {
       @extend .factory-feed__items;
