@@ -13,14 +13,7 @@
 
     </div>
 
-    <?php
-    if ( is_home() && !is_paged() ) :
-      get_template_part( 'template-partials/layout/instagram');
-    endif;
-    ?>
-
-
-    <footer class="site-footer<?php if ( is_page() || is_paged() || is_archive() ) : ?> highlight<?php endif; ?>">
+    <footer class="site-footer highlight">
       <p class="site-footer__copyright">
         <?php echo sprintf( __( 'Stuff from 2000 to %s by SoaPatrick/<a href="%s">Seven</a>', 'soapatrickseven' ), date('Y'), esc_url( home_url( '/log' )) ); ?>
       </p>
