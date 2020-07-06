@@ -1,22 +1,23 @@
+#, fuzzy
 msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: SoaPatrickSeven\n"
-"POT-Creation-Date: 2020-03-21 12:58+0100\n"
+"POT-Creation-Date: 2020-07-06 08:59+0200\n"
 "PO-Revision-Date: 2020-03-21 12:57+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.3\n"
+"X-Generator: Poedit 2.3.1\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-Flags-xgettext: --add-comments=translators:\n"
 "X-Poedit-WPHeader: style.css\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
-"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.min.js\n"
 "X-Poedit-SearchPathExcluded-1: vendor\n"
@@ -33,7 +34,7 @@ msgstr ""
 #: template-partials/content/content-single-factory.php:17
 #: template-partials/layout/navigation.php:25
 #: template-partials/layout/navigation.php:26
-#: template-types/cpt/cpt-factory.php:16 template-types/cpt/cpt-factory.php:42
+#: template-types/cpt/cpt-factory.php:15 template-types/cpt/cpt-factory.php:22
 msgid "Factory"
 msgstr ""
 
@@ -53,12 +54,12 @@ msgstr ""
 msgid "Storage"
 msgstr ""
 
-#: footer.php:25
+#: footer.php:18
 #, php-format
 msgid "Stuff from 2000 to %s by SoaPatrick/<a href=\"%s\">Seven</a>"
 msgstr ""
 
-#: footer.php:28 footer.php:29
+#: footer.php:21 footer.php:22
 msgid "Data Protection"
 msgstr ""
 
@@ -71,31 +72,43 @@ msgstr ""
 msgid "Find Stuff..."
 msgstr ""
 
-#: template-functions/template-functions.php:56
-msgid "Next Entry"
+#: template-functions/functions.php:73
+msgid "Edit"
 msgstr ""
 
-#: template-functions/template-functions.php:57
-msgid "Previous Entry"
+#: template-functions/functions.php:85
+msgid "Next Post"
 msgstr ""
 
-#: template-functions/template-functions.php:70
-msgid "Next Entries"
+#: template-functions/functions.php:86
+msgid "Previous Post"
 msgstr ""
 
-#: template-functions/template-functions.php:70
-msgid "Previous Entries"
+#: template-functions/functions.php:100
+msgid "Next Posts"
 msgstr ""
 
-#: template-functions/theme-setup.php:28
-msgid "Primary"
+#: template-functions/functions.php:100
+msgid "Previous Posts"
+msgstr ""
+
+#: template-functions/functions.php:103
+msgid "Next Items"
+msgstr ""
+
+#: template-functions/functions.php:103
+msgid "Previous Items"
+msgstr ""
+
+#: template-functions/functions.php:106
+msgid "Load More"
 msgstr ""
 
 #: template-partials/content/content-factory_feed.php:14
 msgid "Factory Feed"
 msgstr ""
 
-#: template-partials/content/content-factory_feed.php:34
+#: template-partials/content/content-factory_feed.php:32
 #, php-format
 msgid "The rest can be seen <a href=\"%s\">in the Factory</a>."
 msgstr ""
@@ -127,17 +140,6 @@ msgstr ""
 msgid "Related Blog Posts"
 msgstr ""
 
-#: template-partials/layout/instagram.php:13
-msgid "Instagram Feed"
-msgstr ""
-
-#: template-partials/layout/instagram.php:15
-#, php-format
-msgid ""
-"If you have the time and feel like it, why don&rsquo;t you <a href=\"%s\" "
-"target=\"_blank\" rel=\"noopener\">follow me</a> on Instagram?"
-msgstr ""
-
 #: template-partials/layout/navigation.php:32
 #: template-partials/layout/navigation.php:33
 #: template-partials/layout/settings.php:16
@@ -155,7 +157,7 @@ msgstr ""
 
 #: template-types/cpt/cpt-factory.php:13
 msgctxt "Post Type General Name"
-msgid "Factories"
+msgid "Factory"
 msgstr ""
 
 #: template-types/cpt/cpt-factory.php:14
@@ -163,105 +165,29 @@ msgctxt "Post Type Singular Name"
 msgid "Factory"
 msgstr ""
 
-#: template-types/cpt/cpt-factory.php:15 template-types/cpt/cpt-factory.php:43
-msgid "Factories"
+#: template-types/cpt/cpt-factory.php:16
+msgid "Factory Item"
 msgstr ""
 
 #: template-types/cpt/cpt-factory.php:17
-msgid "Factory Archives"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:18
-msgid "Factory Attributes"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:19
-msgid "Parent Factory:"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:20
-msgid "All Factories"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:21
-msgid "Add New Factory"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:22 template-types/cpt/cpt-log.php:22
-msgid "Add New"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:23
-msgid "New Factory"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:24
-msgid "Edit Factory"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:25
-msgid "Update Factory"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:26
 msgid "View Factory"
 msgstr ""
 
-#: template-types/cpt/cpt-factory.php:27
-msgid "View Factories"
+#: template-types/cpt/cpt-factory.php:18
+msgid "View Factory Item"
 msgstr ""
 
-#: template-types/cpt/cpt-factory.php:28
+#: template-types/cpt/cpt-factory.php:19
 msgid "Search Factory"
 msgstr ""
 
-#: template-types/cpt/cpt-factory.php:29 template-types/cpt/cpt-log.php:29
-msgid "Not found"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:30 template-types/cpt/cpt-log.php:30
-msgid "Not found in Trash"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:31 template-types/cpt/cpt-log.php:31
-msgid "Featured Image"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:32 template-types/cpt/cpt-log.php:32
-msgid "Set featured image"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:33 template-types/cpt/cpt-log.php:33
-msgid "Remove featured image"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:34 template-types/cpt/cpt-log.php:34
-msgid "Use as featured image"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:35
-msgid "Insert into Factory"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:36
-msgid "Uploaded to this Factory"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:37
-msgid "Factories list"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:38
-msgid "Factories list navigation"
-msgstr ""
-
-#: template-types/cpt/cpt-factory.php:39
-msgid "Filter Factories list"
+#: template-types/cpt/cpt-factory.php:23
+msgid "Factory Items"
 msgstr ""
 
 #: template-types/cpt/cpt-log.php:13
 msgctxt "Post Type General Name"
-msgid "Logs"
+msgid "Log"
 msgstr ""
 
 #: template-types/cpt/cpt-log.php:14
@@ -269,79 +195,11 @@ msgctxt "Post Type Singular Name"
 msgid "Log"
 msgstr ""
 
-#: template-types/cpt/cpt-log.php:15 template-types/cpt/cpt-log.php:42
-msgid "Logs"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:16
+#: template-types/cpt/cpt-log.php:15 template-types/cpt/cpt-log.php:18
 msgid "Log"
 msgstr ""
 
-#: template-types/cpt/cpt-log.php:17
-msgid "Log Archives"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:18
-msgid "Log Attributes"
-msgstr ""
-
 #: template-types/cpt/cpt-log.php:19
-msgid "Parent Log:"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:20
-msgid "All Logs"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:21
-msgid "Add New Log"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:23
-msgid "New Log"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:24
-msgid "Edit Log"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:25
-msgid "Update Log"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:26
-msgid "View Log"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:27
-msgid "View Logs"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:28
-msgid "Search Log"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:35
-msgid "Insert into Log"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:36
-msgid "Uploaded to this Log"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:37
-msgid "Logs list"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:38
-msgid "Logs list navigation"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:39
-msgid "Filter Logs list"
-msgstr ""
-
-#: template-types/cpt/cpt-log.php:43
 msgid "Changelogs"
 msgstr ""
 
