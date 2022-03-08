@@ -1,21 +1,54 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var autoprefixer = require('gulp-autoprefixer');
-
-var input = './assets/scss/style.scss';
-var output = './';
-
-var sassOptions = {
-  errLogToConsole: true,
-  outputStyle: 'expanded'
+var browserSync = require('browser-sync').create();
+var reload = browserSync.reload;
+/**
+ * configs
+ */
+var config = {
+  url: "soapatrickseven.local",
+  scssSrc: './scss/*.scss',
+  scssDest: './css'
 };
 
-gulp.task('sass', function () {
+/**
+ * compile sass for development
+ */
+gulp.task("sass", function() {
   return gulp
-    .src(input)
-    .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(autoprefixer())
-    .pipe(gulp.dest(output));
+    .src(config.scssSrc)
+    .pipe(sass({
+      errLogToConsole: true,
+      outputStyle: 'expanded'
+    }).on("error", sass.logError))
+    .pipe(gulp.dest(config.scssDest))
+    .pipe(browserSync.stream({ match: "**/*.css" }));
 });
 
-gulp.task('default', gulp.series(['sass']));
+/**
+ * compile sass for deployment
+ */
+gulp.task("default", function() {
+  return gulp
+    .src(config.scssSrc)
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on("error", sass.logError))
+    .pipe(gulp.dest(config.scssDest));
+});
+
+/**
+ * watch task with browser reload
+ */
+gulp.task("watch", function() {
+
+  browserSync.init({
+    proxy: config.url,
+    injectChanges: true,
+    notify: false
+  });
+
+  gulp.watch(["./scss/**/*.scss"], gulp.series('sass'));
+  gulp.watch(["./js/**/*.js"]).on("change", browserSync.reload);
+  gulp.watch(["./**/*.php"]).on("change", browserSync.reload);
+});
