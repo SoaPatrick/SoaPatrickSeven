@@ -5,7 +5,7 @@ A theme for my personal website. This theme was released on **February 23rd 2020
 
 A static version can be found here: [https://archive.soapatrick.com/sp7/](https://archive.soapatrick.com/sp7/)
 
-## Development Requirements
+## Requirements
 
 - Node
 - Gulp
@@ -18,14 +18,14 @@ Clone this repository and run:
 npm install
 ```
 
-## Starting local development
+## Development
 change the URL of your local Wordpress environment in the `gulpfile.js` then run:
 
 ```
 npm run dev
 ```
 
-## Building for production
+## Production
 
 ```
 npm run build
